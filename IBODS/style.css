@@ -14,9 +14,10 @@
     width: 240px;
 }
 
-.nav-ul{
-    float: right;
-    margin-right: 10px;
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .nav-li{
@@ -52,6 +53,17 @@
 
 .volumen-p-example{
     margin: 20px;
+    font-size: 20px;
+}
+
+.div-full-volume-slider{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px;
+}
+
+.div-volume-slider-0, .div-volume-slider-100{
     font-size: 20px;
 }
 

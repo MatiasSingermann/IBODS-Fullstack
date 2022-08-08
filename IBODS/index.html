@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class = "header">
-        <nav>
+        <nav class="nav-container">
             <img src="./Imágenes/Logo.png" alt="Logo IBODS" title="IBODS" class="logo">
             <ul class="nav-ul">
                 <div class="div-li-volumen">
@@ -30,6 +30,16 @@
         Arrastra el círculo hacia la izquierda para bajar el volumen y hacia la derecha para subirlo.
     </p>
 
-    <input type="range" min="1" max="100" class="volume-slider">
+    <div class="div-full-volume-slider">
+        <div class="div-volume-slider-0">
+            <b>0</b>
+        </div>
+        <div class="div-volume-slider">
+            <input type="range" min="0" max="100" class="volume-slider">
+        </div>
+        <div class="div-volume-slider-100">
+            <b>100</b>
+        </div>
+    </div>
 </body>
 </html>
