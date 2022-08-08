@@ -33,7 +33,7 @@
 }
 
 .div-li-volumen:hover, .div-li-objetos:hover{
-    background-color: rgba(0, 0, 255, 1);
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
 .nav-li a{
@@ -43,4 +43,19 @@
     font-size: 26px;
     padding: 10px;
     border-right: 10px;
+}
+
+.volumen-h1-example{
+    margin: 20px;
+    font-size: 50px;
+}
+
+.volumen-p-example{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.volume-slider{
+    margin: 20px;
+    width: 600px;
 }
