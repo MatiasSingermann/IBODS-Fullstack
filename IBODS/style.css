@@ -3,6 +3,12 @@
     padding: 0;
     font-family: 'Red Hat Display', sans-serif;
     scroll-behavior: smooth;
+    scroll-margin-top: 150px;
+}
+
+*::selection{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(13, 147, 93, 0.8);
 }
 
 .header{
@@ -25,15 +31,13 @@
     justify-content: space-between;
 }
 
-.nav-li{
-    display: inline;
-}
-
 .div-li-volumen, .div-li-objetos, .div-li-conexion{
-    display: inline-block;
+    display: inline-flex;
     margin: 10px;
     padding: 10px 15px;
     border-radius: 20px;
+    align-items: center;
+    align-self: center;
     transition-property: background-color;
     transition-duration: 0.2s;
 }
@@ -44,6 +48,10 @@
 
 .div-li-volumen:focus, .div-li-objetos:focus, .div-li-conexion:focus{
     background-color: rgba(6, 6, 105, 0.5);
+}
+
+.nav-li{
+    display: inline;
 }
 
 .nav-li a{
@@ -105,29 +113,39 @@ select{
     transition-duration: 0.2s;
 }
 
-.btn-buscar:hover, .btn-conectar:hover{
+.btn-buscar:hover, .btn-conectar:hover, .menosymas:hover{
     background-color: rgba(22, 22, 116, 1);
 }
 
-.btn-buscar:focus, .btn-conectar:focus{
+.btn-buscar:focus, .btn-conectar:focus, .menosymas:focus{
     background-color: rgba(8, 8, 71, 1);
 }
 
 
-.div-full-volume-slider{
+.div-volumen{
     display: flex;
-    justify-content: start;
+    margin: 20px;
     align-items: center;
-    margin: 20px;
 }
 
-.div-volume-slider-0, .div-volume-slider-100{
-    font-size: 20px;
+.menosymas{
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(45, 45, 167, 1);
+    border-radius: 20px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
 }
 
-.volume-slider{
-    margin: 20px;
-    width: 600px;
+.num-volumen{
+    width: 400px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 0px 20px;
+    font-size: 40px;
+    text-align: center;
 }
 
 .button-container{
@@ -141,7 +159,7 @@ select{
     margin-right: 10px;
     margin-bottom: 10px;
     height: 300px;
-    background-color: rgba(24, 204, 24, 1);
+    background-color: rgba(14, 194, 14, 1);
     font-size: 30px;
     border-radius: 20px;
     padding: 20px;
