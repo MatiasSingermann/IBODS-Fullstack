@@ -7,6 +7,9 @@
 .header{
     background-color: rgba(38, 38, 103, 1);
     width: 100%;
+    position: sticky;
+    top: 0;
+    margin-top: 0;
 }
 
 .logo{
@@ -73,6 +76,42 @@
     font-size: 20px;
 }
 
+.div-form{
+    margin: 20px;
+    display: flex;
+}
+
+select{
+    display: block;
+    width: 700px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.btn-buscar, .btn-conectar{
+    display: inline-block;
+    margin: 20px;
+    margin-left: 0px;
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgba(45, 45, 167, 1);
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.btn-buscar:hover, .btn-conectar:hover{
+    background-color: rgba(22, 22, 116, 1);
+}
+
+.btn-buscar:focus, .btn-conectar:focus{
+    background-color: rgba(8, 8, 71, 1);
+}
+
+
 .div-full-volume-slider{
     display: flex;
     justify-content: start;
@@ -121,39 +160,6 @@
     width: 200px;
     display: block;
 }
-
-
-.div-form{
-    margin: 20px;
-    display: flex;
-}
-
-select{
-    display: block;
-}
-
-.btn-buscar, .btn-conectar{
-    display: inline-block;
-    margin: 20px;
-    margin-left: 0px;
-    width: 250px;
-    height: 100px;
-    border-radius: 20px;
-    background-color: rgba(45, 45, 167, 1);
-    font-size: 30px;
-    color: rgba(255, 255, 255, 1);
-    transition-property: background-color;
-    transition-duration: 0.2s;
-}
-
-.btn-buscar:hover, .btn-conectar:hover{
-    background-color: rgba(22, 22, 116, 1);
-}
-
-.btn-buscar:focus, .btn-conectar:focus{
-    background-color: rgba(8, 8, 71, 1);
-}
-
 
 .div-footer{
     display: flex;
