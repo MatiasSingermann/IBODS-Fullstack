@@ -10,23 +10,35 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
 </head>
+
+<script src="./index.js"></script>
+
 <body>
     <header class = "header">
         <nav class="nav-container">
             <img src="./Imágenes/Logo.png" alt="Logo IBODS" title="IBODS" class="logo">
             <ul class="nav-ul">
-                <div class="div-li-conexion">
-                    <img src="./Imágenes/wifi.svg" alt="WIFI" class="con-img">
-                    <li class="nav-li"><a href="#con"><b>Conexión</b></a></li>
-                </div>
-                <div class="div-li-volumen">
-                    <img src="./Imágenes/volumen.svg" alt="Volumen" class="vol-img">
-                    <li class="nav-li"> <a href="#vol"><b>Volumen</b></a></li>
-                </div>
-                <div class="div-li-objetos">
-                    <img src="./Imágenes/arbolchico.svg" alt="Objetos" class="obj-img">
-                    <li class="nav-li"><a href="#obj"><b>Objetos</b></a></li>
-                </div>
+
+                <a href="#con" class="href-con">
+                    <div class="div-li-conexion">
+                        <img src="./Imágenes/wifi.svg" alt="WIFI" class="con-img">
+                        <li class="nav-li"><b>Conexión</b></li>
+                    </div>
+                </a>
+
+                <a href="#vol" class="href-vol">
+                    <div class="div-li-volumen">
+                        <img src="./Imágenes/volumen.svg" alt="Volumen" class="vol-img">
+                        <li class="nav-li"><b>Volumen</b></li>
+                    </div>
+                </a>
+
+                <a href="#obj" class="href-obj">
+                    <div class="div-li-objetos">
+                        <img src="./Imágenes/arbolchico.svg" alt="Objetos" class="obj-img">
+                        <li class="nav-li"><b>Objetos</b></li>
+                    </div>
+                </a>
             </ul>
         </nav>
     </header>
@@ -43,8 +55,11 @@
             <option value="messi">Messi come empanadas</option>
             <option value="milanesa">La milanesa de carne</option>
         </select>
-        <button class="btn-buscar"><b>Buscar</b></button>
-        <button class="btn-conectar"><b>Conectar</b></button>
+
+        <div class="div-buttons">
+            <button class="btn-buscar"><b>Buscar</b></button>
+            <button class="btn-conectar"><b>Conectar</b></button>
+        </div>
     </form>
 </div>
 
@@ -54,9 +69,9 @@
     </p>
 
     <div class="div-volumen">
-        <button class="menosymas">-</button>
-        <input type="text" class="num-volumen" placeholder="0 - 100">
-        <button class="menosymas">+</button>
+        <button class="btn-menos">-</button>
+        <input type="number" min="0" max="100" class="num-volumen" placeholder="0 - 100">
+        <button class="btn-mas">+</button>
     </div>
 
     <h2 class="title" id="obj">Objetos</h2>

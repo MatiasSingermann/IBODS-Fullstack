@@ -23,6 +23,8 @@
 .logo{
     margin: 10px;
     width: 240px;
+    height: 100%;
+    max-height: 100%;
 }
 
 .nav-container{
@@ -31,8 +33,13 @@
     justify-content: space-between;
 }
 
-.div-li-volumen, .div-li-objetos, .div-li-conexion{
-    display: inline-flex;
+.nav-ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.href-con, .href-vol, .href-obj{
+    display: flex;
     margin: 10px;
     padding: 10px 15px;
     border-radius: 20px;
@@ -42,46 +49,75 @@
     transition-duration: 0.2s;
 }
 
-.div-li-volumen:hover, .div-li-objetos:hover, .div-li-conexion:hover{
+.div-li-imagen{
+    align-items: center;
+}
+
+.href-con:hover, .href-vol:hover, .href-obj:hover{
     background-color: rgba(0, 0, 255, 0.5);
 }
 
-.div-li-volumen:focus, .div-li-objetos:focus, .div-li-conexion:focus{
+.href-con:focus, .href-vol:focus, .href-obj:focus{
     background-color: rgba(6, 6, 105, 0.5);
 }
 
 .nav-li{
     display: inline;
+    padding-left: 5px;
 }
 
-.nav-li a{
+.nav-li b{
     display: inline-block;
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-size: 26px;
+}
+
+.div-li-conexion{
+    display: flex;
+    align-content: center;
     padding: 10px;
-    border-right: 10px;
+}
+
+.div-li-volumen{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+}
+
+.div-li-objetos{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+    justify-content: space-evenly;
 }
 
 .vol-img{
     width: 30px;
+    padding-right: 5px;
 }
 
 .obj-img{
     width: 30px;
+    padding-right: 5px;
 }
 
 .con-img{
     width: 30px;
+    padding-right: 5px;
 }
 
 .title{
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px;
     margin-top: 40px;
     font-size: 50px;
 }
 
 .subtitle{
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px;
     font-size: 20px;
 }
@@ -89,18 +125,25 @@
 .div-form{
     margin: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 select{
-    display: block;
+    display: flex;
     width: 700px;
     padding: 20px;
     border-radius: 20px;
     font-size: 20px;
+    max-width: 100%;
+}
+
+.div-buttons{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn-buscar, .btn-conectar{
-    display: inline-block;
+    flex-wrap: wrap;
     margin: 20px;
     margin-left: 0px;
     width: 250px;
@@ -109,15 +152,17 @@ select{
     background-color: rgba(45, 45, 167, 1);
     font-size: 30px;
     color: rgba(255, 255, 255, 1);
+    justify-content: center;
+    align-content: center;
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
-.btn-buscar:hover, .btn-conectar:hover, .menosymas:hover{
+.btn-buscar:hover, .btn-conectar:hover, .btn-menos:hover, .btn-mas:hover{
     background-color: rgba(22, 22, 116, 1);
 }
 
-.btn-buscar:focus, .btn-conectar:focus, .menosymas:focus{
+.btn-buscar:focus, .btn-conectar:focus, .btn-menos:focus, .btn-mas:focus{
     background-color: rgba(8, 8, 71, 1);
 }
 
@@ -126,9 +171,11 @@ select{
     display: flex;
     margin: 20px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.menosymas{
+.btn-menos, .btn-mas{
+    display: flex;
     width: 80px;
     height: 80px;
     font-size: 60px;
@@ -137,6 +184,15 @@ select{
     border-radius: 20px;
     transition-property: background-color;
     transition-duration: 0.2s;
+}
+
+.btn-menos{
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn-mas{
+    justify-content: center;
 }
 
 .num-volumen{
@@ -197,4 +253,11 @@ select{
 .tic-img{
     margin: 20px;
     width: 100px;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .nav-ul{
+        display: none;
+    }
 }
