@@ -23,7 +23,6 @@
 .logo{
     margin: 10px;
     width: 240px;
-    height: 100%;
     max-height: 100%;
 }
 
@@ -36,6 +35,18 @@
 .nav-ul{
     display: flex;
     flex-wrap: wrap;
+}
+
+.div-puntos{
+    display: none;
+}
+
+.puntos-img{
+    display: flex;
+    position: static;
+    width: 50px;
+    align-self: center;
+    padding: 5px;
 }
 
 .href-con, .href-vol, .href-obj{
@@ -132,9 +143,11 @@ select{
     display: flex;
     width: 700px;
     padding: 20px;
+    border: 2px inset rgba(150, 150, 150, 1);
     border-radius: 20px;
     font-size: 20px;
     max-width: 100%;
+    background-color: rgba(238, 238, 238, 1);
 }
 
 .div-buttons{
@@ -148,6 +161,7 @@ select{
     margin-left: 0px;
     width: 250px;
     height: 100px;
+    border: 2px outset rgba(13, 13, 138, 1);
     border-radius: 20px;
     background-color: rgba(45, 45, 167, 1);
     font-size: 30px;
@@ -181,6 +195,7 @@ select{
     font-size: 60px;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(45, 45, 167, 1);
+    border: 2px outset rgba(13, 13, 138, 1);
     border-radius: 20px;
     transition-property: background-color;
     transition-duration: 0.2s;
@@ -198,10 +213,12 @@ select{
 .num-volumen{
     width: 400px;
     height: 80px;
+    border: 2px inset rgba(150, 150, 150, 1);
     border-radius: 20px;
     margin: 0px 20px;
     font-size: 40px;
     text-align: center;
+    background-color: rgba(238, 238, 238, 1);
 }
 
 .button-container{
@@ -212,11 +229,14 @@ select{
 }
 
 .object{
+    justify-content: center;
+    align-content: center;
     margin-right: 10px;
     margin-bottom: 10px;
     height: 300px;
     background-color: rgba(14, 194, 14, 1);
     font-size: 30px;
+    border: 2px outset rgba(138, 138, 138, 1);
     border-radius: 20px;
     padding: 20px;
     padding-bottom: 0;
@@ -259,5 +279,19 @@ select{
 
     .nav-ul{
         display: none;
+    }
+
+    .div-puntos{
+        display: flex;
+        margin-right: 10px;
+        border-radius: 20px;
+        align-items: center;
+        align-self: center;
+        transition-property: background-color;
+        transition-duration: 0.2s;
+    }
+
+    .div-puntos:hover{
+        background-color: rgba(0, 0, 255, 0.5);
     }
 }
