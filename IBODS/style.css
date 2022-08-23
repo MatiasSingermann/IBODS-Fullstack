@@ -11,7 +11,8 @@
     background-color: rgba(13, 147, 93, 0.8);
 }
 
-.header{
+/* Nav */
+#header{
     background-color: rgba(38, 38, 103, 1);
     width: 100%;
     position: sticky;
@@ -20,28 +21,28 @@
     z-index: 1000;
 }
 
-.logo{
+#logo{
     margin: 10px;
     width: 240px;
     max-height: 100%;
 }
 
-.nav-container{
+#nav-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.nav-ul{
+#nav-ul{
     display: flex;
     flex-wrap: wrap;
 }
 
-.div-puntos{
+#div-puntos{
     display: none;
 }
 
-.puntos-img{
+#puntos-img{
     display: flex;
     position: static;
     width: 50px;
@@ -49,7 +50,7 @@
     padding: 5px;
 }
 
-.href-con, .href-vol, .href-obj{
+#href-con, #href-vol, #href-obj{
     display: flex;
     margin: 10px;
     padding: 10px 15px;
@@ -60,15 +61,11 @@
     transition-duration: 0.2s;
 }
 
-.div-li-imagen{
-    align-items: center;
-}
-
-.href-con:hover, .href-vol:hover, .href-obj:hover{
+#href-con:hover, #href-vol:hover, #href-obj:hover{
     background-color: rgba(0, 0, 255, 0.5);
 }
 
-.href-con:focus, .href-vol:focus, .href-obj:focus{
+#href-con:focus, #href-vol:focus, #href-obj:focus{
     background-color: rgba(6, 6, 105, 0.5);
 }
 
@@ -84,40 +81,31 @@
     font-size: 26px;
 }
 
-.div-li-conexion{
+#div-li-conexion{
     display: flex;
     align-content: center;
     padding: 10px;
 }
 
-.div-li-volumen{
+#div-li-volumen{
     display: flex;
     align-content: center;
     padding: 10px;
 }
 
-.div-li-objetos{
+#div-li-objetos{
     display: flex;
     align-content: center;
     padding: 10px;
     justify-content: space-evenly;
 }
 
-.vol-img{
+#vol-img, #obj-img, #con-img{
     width: 30px;
     padding-right: 5px;
 }
 
-.obj-img{
-    width: 30px;
-    padding-right: 5px;
-}
-
-.con-img{
-    width: 30px;
-    padding-right: 5px;
-}
-
+/* Conexión */
 .title{
     display: flex;
     flex-wrap: wrap;
@@ -133,7 +121,7 @@
     font-size: 20px;
 }
 
-.div-form{
+#div-form{
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -150,12 +138,12 @@ select{
     background-color: rgba(238, 238, 238, 1);
 }
 
-.div-buttons{
+#div-buttons{
     display: flex;
     flex-wrap: wrap;
 }
 
-.btn-buscar, .btn-conectar{
+#btn-buscar, #btn-conectar{
     flex-wrap: wrap;
     margin: 20px;
     margin-left: 0px;
@@ -172,23 +160,24 @@ select{
     transition-duration: 0.2s;
 }
 
-.btn-buscar:hover, .btn-conectar:hover, .btn-menos:hover, .btn-mas:hover{
+#btn-buscar:hover, #btn-conectar:hover, #btn-menos:hover, #btn-mas:hover{
     background-color: rgba(22, 22, 116, 1);
 }
 
-.btn-buscar:focus, .btn-conectar:focus, .btn-menos:focus, .btn-mas:focus{
+#btn-buscar:focus, #btn-conectar:focus, #btn-menos:focus, #btn-mas:focus{
     background-color: rgba(8, 8, 71, 1);
 }
 
 
-.div-volumen{
+/* Volumen */
+#div-volumen{
     display: flex;
     margin: 20px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.btn-menos, .btn-mas{
+#btn-menos, #btn-mas{
     display: flex;
     width: 80px;
     height: 80px;
@@ -201,16 +190,16 @@ select{
     transition-duration: 0.2s;
 }
 
-.btn-menos{
+#btn-menos{
     justify-content: center;
     align-items: flex-end;
 }
 
-.btn-mas{
+#btn-mas{
     justify-content: center;
 }
 
-.num-volumen{
+#num-volumen{
     width: 400px;
     height: 80px;
     border: 2px inset rgba(150, 150, 150, 1);
@@ -221,13 +210,15 @@ select{
     background-color: rgba(238, 238, 238, 1);
 }
 
-.btns-container{
+
+/* Objetos */
+#btns-container{
     display: flex;
     margin: 20px;
     justify-content: center;
 }
 
-.btns-container-2{
+#btns-container-2{
     display: flex;
     width: 100%;
     border-radius: 20px;
@@ -238,33 +229,33 @@ select{
     justify-content: space-between;
 }
 
-.btn-container{
+#btn-container{
     display: flex;
     align-content: center;
 }
 
-.btn-container img{
+#btn-container img{
     width: 100px;
     align-self: center;
     padding-right: 20px;
 }
 
-.btn-container b{
+#btn-container b{
     font-size: 40px;
     align-self: center;
     color: rgba(255, 255, 255, 1);
 }
 
-.btn-container-2{
+#btn-container-2{
     display: flex;
 }
 
-.btn-container-2 input{
+#btn-container-2 input{
     justify-self: flex-end;
 }
 
 /* The switch - the box around the slider */
-.switch {
+#switch {
     position: relative;
     display: flex;
     width: 120px;
@@ -274,14 +265,14 @@ select{
   }
   
   /* Hide default HTML checkbox */
-  .switch input {
+    #switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
   /* The slider */
-  .slider {
+    #slider {
     align-content: center;
     align-self: center;
     position: absolute;
@@ -296,7 +287,7 @@ select{
     transition: .4s;
   }
   
-  .slider:before {
+    #slider:before {
     position: absolute;
     content: "";
     height: 40px;
@@ -309,21 +300,21 @@ select{
     transition: .4s;
   }
   
-  input:checked + .slider {
+  input:checked + #slider {
     background-color: #2196F3;
   }
   
-  input:focus + .slider {
+  input:focus + #slider {
     box-shadow: 0 0 1px #2196F3;
   }
   
-  input:checked + .slider:before {
+  input:checked + #slider:before {
     -webkit-transform: translateX(70px);
     -ms-transform: translateX(70px);
     transform: translateX(70px);
   }
 
-.button-container{
+#button-container{
     display: flex;
     margin: 20px;
     justify-content: start;
@@ -359,31 +350,33 @@ select{
     display: block;
 }
 
-.div-footer{
+
+/* Footer */
+#div-footer{
     display: flex;
     justify-content: space-between;
     background-color: rgba(38, 38, 103, 1);
 }
 
-.div-footer-txt{
+#div-footer-txt{
     display: block;
     margin: 20px;
     color: rgba(255, 255, 255, 1);
     font-size: 20px;
 }
 
-.tic-img{
+#tic-img{
     margin: 20px;
     width: 100px;
 }
 
 @media only screen and (max-width: 950px) {
 
-    .nav-ul{
+    #nav-ul{
         display: none;
     }
 
-    .div-puntos{
+    #div-puntos{
         display: flex;
         margin-right: 10px;
         border-radius: 20px;
@@ -393,7 +386,7 @@ select{
         transition-duration: 0.2s;
     }
 
-    .div-puntos:hover{
+    #div-puntos:hover{
         background-color: rgba(0, 0, 255, 0.5);
     }
 }

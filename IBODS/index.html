@@ -14,34 +14,34 @@
 <script src="./index.js"></script>
 
 <body>
-    <header class = "header">
-        <nav class="nav-container">
-            <img src="./Imágenes/Logo.png" alt="Logo IBODS" title="IBODS" class="logo">
-            <ul class="nav-ul">
+    <header id = "header">
+        <nav id="nav-container">
+            <img src="./Imágenes/Logo.png" alt="Logo IBODS" title="IBODS" id="logo">
+            <ul id="nav-ul">
 
-                <a href="#con" class="href-con">
-                    <div class="div-li-conexion">
-                        <img src="./Imágenes/wifi.svg" alt="WIFI" class="con-img">
+                <a href="#con" id="href-con">
+                    <div id="div-li-conexion">
+                        <img src="./Imágenes/wifi.svg" alt="WIFI" id="con-img">
                         <li class="nav-li"><b>Conexión</b></li>
                     </div>
                 </a>
 
-                <a href="#vol" class="href-vol">
-                    <div class="div-li-volumen">
-                        <img src="./Imágenes/volumen.svg" alt="Volumen" class="vol-img">
+                <a href="#vol" id="href-vol">
+                    <div id="div-li-volumen">
+                        <img src="./Imágenes/volumen.svg" alt="Volumen" id="vol-img">
                         <li class="nav-li"><b>Volumen</b></li>
                     </div>
                 </a>
 
-                <a href="#obj" class="href-obj">
-                    <div class="div-li-objetos">
-                        <img src="./Imágenes/arbolchico.svg" alt="Objetos" class="obj-img">
+                <a href="#obj" id="href-obj">
+                    <div id="div-li-objetos">
+                        <img src="./Imágenes/arbolchico.svg" alt="Objetos" id="obj-img">
                         <li class="nav-li"><b>Objetos</b></li>
                     </div>
                 </a>
             </ul>
 
-            <div class="div-puntos">
+            <div id="div-puntos">
                 <img src="./Imágenes/puntos.svg" alt="Puntos" class="puntos-img">
             </div>
         </nav>
@@ -52,7 +52,7 @@
         Usa el botón "BUSCAR" para buscar redes Wi-Fi. Luego selecciona la red a la que te quieras conectar y presiona el botón "CONECTAR".
     </p>
 
-<div class="div-form">
+<div id="div-form">
     <form action="POST">
         <select name="Red-WIFI" id="Red" required>
             <option value="" disabled selected>Elige una red Wi-Fi:</option>
@@ -60,9 +60,9 @@
             <option value="milanesa">La milanesa de carne</option>
         </select>
 
-        <div class="div-buttons">
-            <button class="btn-buscar"><b>Buscar</b></button>
-            <button class="btn-conectar"><b>Conectar</b></button>
+        <div id="div-buttons">
+            <button id="btn-buscar"><b>Buscar</b></button>
+            <button id="btn-conectar"><b>Conectar</b></button>
         </div>
     </form>
 </div>
@@ -72,10 +72,10 @@
         Haz click en el "-" para bajar el volumen y en el "+" para subirlo.
     </p>
 
-    <div class="div-volumen">
-        <button class="btn-menos">-</button>
-        <input type="number" min="0" max="100" class="num-volumen" value="50">
-        <button class="btn-mas">+</button>
+    <div id="div-volumen">
+        <button id="btn-menos">-</button>
+        <input type="number" min="0" max="100" id="num-volumen" value="50">
+        <button id="btn-mas">+</button>
     </div>
 
     <h2 class="title" id="obj">Objetos</h2>
@@ -83,22 +83,22 @@
             Selecciona el objeto que quieras escuchar o dejar de escuchar. Los que estan en verde se escucharán y los que estan en rojo no.
         </p>
 
-    <div class="btns-container">
-        <div class="btns-container-2">
-            <div class="btn-container">
+    <div id="btns-container">
+        <div id="btns-container-2">
+            <div id="btn-container">
                 <img src="./Imágenes/andamios.svg" alt="Andamios">
                 <b>Andamios</b>
             </div>
-            <div class="btn-container-2">
-                <label class="switch">
+            <div id="btn-container-2">
+                <label id="switch">
                     <input type="checkbox">
-                    <span class="slider"></span>
+                    <span id="slider"></span>
                 </label>
             </div>
         </div>
     </div>
 
-    <div class="button-container">
+    <div id="button-container">
         <button class="object"><img src="./Imágenes/andamios.svg" alt="Andamios" class="object-img"><b>Andamios</b></button>
         <button class="object"><img src="./Imágenes/arbol.svg" alt="Árboles" class="object-img"><b>Árboles</b></button>
         <button class="object"><img src="./Imágenes/automovil.svg" alt="Automóviles" class="object-img"><b>Automóviles</b></button>
@@ -118,10 +118,10 @@
         <button class="object"><img src="./Imágenes/semaforos.svg" alt="Semáforos" class="object-img"><b>Semáforos</b></button>
     </div>
     
-    <footer class="footer">
-        <div class="div-footer">
-            <b class="div-footer-txt">Todos los derechos reservados.</b>
-            <img src="./Imágenes/tic.png" alt="TIC-logo" class="tic-img">
+    <footer id="footer">
+        <div id="div-footer">
+            <b id="div-footer-txt">Todos los derechos reservados.</b>
+            <img src="./Imágenes/tic.png" alt="TIC-logo" id="tic-img">
         </div>
     </footer>
 </body>
