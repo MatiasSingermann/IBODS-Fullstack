@@ -214,12 +214,12 @@ select{
 /* Objetos */
 #btns-container{
     display: flex;
-    margin: 20px;
     justify-content: center;
 }
 
 #btns-container-2{
     display: flex;
+    margin: 20px;
     width: 100%;
     border-radius: 20px;
     border: 2px outset rgba(22, 22, 116, 1);
@@ -275,7 +275,7 @@ select{
     #slider {
     align-content: center;
     align-self: center;
-    position: absolute;
+    /* position: absolute; */
     cursor: pointer;
     top: 0;
     left: 0;
@@ -288,7 +288,7 @@ select{
   }
   
     #slider:before {
-    position: absolute;
+    /* position: absolute; */
     content: "";
     height: 40px;
     width: 40px;
@@ -372,8 +372,13 @@ select{
 
 @media only screen and (max-width: 950px) {
 
+    /* Nav */
     #nav-ul{
         display: none;
+    }
+
+    #logo{
+        
     }
 
     #div-puntos{
@@ -388,5 +393,32 @@ select{
 
     #div-puntos:hover{
         background-color: rgba(0, 0, 255, 0.5);
+    }
+
+    /* Conexion */
+    #Red{
+        width: 200px;
+    }
+    
+
+    /* Volumen */
+    #num-volumen{
+        width: 10px;
+    }
+
+
+    /* Objetos */
+    #btns-container{
+        width: 10px;
+    }
+
+    #img-obj{
+        display: flex;
+        width: 10px;
+    }
+
+    /* Footer */
+    #div-footer-txt{
+        
     }
 }
