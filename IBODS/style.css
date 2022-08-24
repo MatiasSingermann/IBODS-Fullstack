@@ -215,6 +215,7 @@ select{
 #btns-container{
     display: flex;
     justify-content: center;
+    align-content: center;
 }
 
 #btns-container-2{
@@ -248,71 +249,13 @@ select{
 
 #btn-container-2{
     display: flex;
+    align-content: center;
 }
 
 #btn-container-2 input{
-    justify-self: flex-end;
-}
-
-/* The switch - the box around the slider */
-#switch {
-    position: relative;
-    display: flex;
-    width: 120px;
-    height: 60px;
     align-self: center;
-    align-content: center;
-  }
-  
-  /* Hide default HTML checkbox */
-    #switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-    #slider {
-    align-content: center;
-    align-self: center;
-    /* position: absolute; */
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 20px;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-    #slider:before {
-    /* position: absolute; */
-    content: "";
-    height: 40px;
     width: 40px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + #slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + #slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + #slider:before {
-    -webkit-transform: translateX(70px);
-    -ms-transform: translateX(70px);
-    transform: translateX(70px);
-  }
+}
 
 #button-container{
     display: flex;
@@ -397,19 +340,34 @@ select{
 
     /* Conexion */
     #Red{
-        width: 200px;
+        width: 300px;
+    }
+
+    #btn-buscar, #btn-conectar{
+        margin-bottom: 0;
+        width: 140px;
+        height: 80px;
+        font-size: 26px;
     }
     
 
     /* Volumen */
     #num-volumen{
-        width: 10px;
+        width: 100px;
     }
 
 
     /* Objetos */
     #btns-container{
-        width: 10px;
+        width: 360px;
+    }
+
+    #btn-container img{
+        width: 60px;
+    }
+    
+    #btn-container b{
+        font-size: 30px;
     }
 
     #img-obj{
