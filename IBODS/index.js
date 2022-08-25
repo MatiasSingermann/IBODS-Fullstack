@@ -30,5 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
         hammenu.style.display = "none";
     }
     );
+    document.addEventListener("click", (e) => {
+        if(e.target.id === "hammenu" || e.target.id === "puntos-img")
+        {
+            hammenu.style.display = "flex";
+        }
+        else
+        {
+            hammenu.style.display = "none";
+        }
+    }
+    );
 }
 );
