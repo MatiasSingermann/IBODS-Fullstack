@@ -105,6 +105,79 @@
     padding-right: 5px;
 }
 
+
+/* Hamburger menu */
+#ham-menu-container{
+    display: none;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    top: 94px;
+    margin-top: 0;
+    z-index: 500;
+}
+
+#ham-menu{
+    background-color: rgba(55, 55, 150, 1);
+    width: 100%;
+    height: 172px;
+}
+
+#ham-href-con, #ham-href-vol, #ham-href-obj{
+    display: flex;
+    margin: 2px;
+    padding: 2px 3px;
+    border-radius: 20px;
+    align-items: center;
+    align-self: center;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#ham-href-con:hover, #ham-href-vol:hover, #ham-href-obj:hover{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#ham-href-con:focus, #ham-href-vol:focus, #ham-href-obj:focus{
+    background-color: rgba(6, 6, 105, 0.5);
+}
+
+.ham-nav-li{
+    display: inline;
+    padding-left: 5px;
+}
+
+.ham-nav-li b{
+    display: inline-block;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#ham-div-li-conexion{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+}
+
+#ham-div-li-volumen{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+}
+
+#ham-div-li-objetos{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+#ham-vol-img, #ham-obj-img, #ham-con-img{
+    width: 30px;
+    padding-right: 5px;
+}
+
 /* Conexión */
 .title{
     display: flex;
@@ -350,6 +423,11 @@ select{
         font-size: 26px;
     }
     
+
+    /* Hamburger menu */
+    #ham-menu-container{
+        
+    }
 
     /* Volumen */
     #num-volumen{
