@@ -31,14 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
     document.addEventListener("click", (e) => {
-        if(e.target.id === "hammenu" || e.target.id === "puntos-img")
+        if(e.target.id === "puntos-img" && hammenu.style.display === "none")
         {
             hammenu.style.display = "flex";
         }
-        else
+        else if((e.target.id === "hammenu" && hammenu.style.display === "flex") || (e.target.id === "puntos-img" && hammenu.style.display === "flex"))
         {
             hammenu.style.display = "none";
         }
+        console.log("Display: " + hammenu.style.display);
+        console.log("Target: " + e.target.id);
     }
     );
 }

@@ -111,14 +111,15 @@
     display: none;
     justify-content: center;
     align-content: center;
-    position: sticky;
+    position: fixed;
     top: 94px;
     margin-top: 0;
     z-index: 500;
+    width: 100%;
 }
 
 #ham-menu{
-    background-color: rgba(55, 55, 150, 1);
+    background-color: rgba(55, 55, 150, 0.96);
     width: 100%;
     height: 172px;
 }
