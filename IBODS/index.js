@@ -8,48 +8,57 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnmas = document.getElementById("btn-mas");
     const btnmenos = document.getElementById("btn-menos");
     const valorvolumen = document.getElementById("num-volumen");
-    
+
     hambutton.addEventListener("click", () => {
-        if(hammenu.style.display === "none")
+        if(hammenu.classList.contains("show"))
         {
-            hammenu.style.display = "flex";
+            hammenu.classList.remove("show");
+            return;
         }
         else
         {
-            hammenu.style.display = "none";
+            hammenu.classList.add("show");
         }
+        // if (hammenu.style.display === "none") {
+        //     hammenu.style.display = "flex";
+        // }
+        // else {
+        //     hammenu.style.display = "none";
+        // }
     }
     );
 
     hamcon.addEventListener("click", () => {
-        hammenu.style.display = "none";
+        if(hammenu.classList.contains("show"))
+        {
+            hammenu.classList.remove("show");
+        }
+        // hammenu.style.display = "none";
     }
     );
     hamvol.addEventListener("click", () => {
-        hammenu.style.display = "none";
+        hammenu.classList.remove("show");
     }
     );
     hamobj.addEventListener("click", () => {
-        hammenu.style.display = "none";
+        hammenu.classList.remove("show");
     }
     );
     document.addEventListener("click", (e) => {
-        if(e.target.id === "puntos-img" && hammenu.style.display === "none")
-        {
-            hammenu.style.display = "flex";
+        console.log("Display: " + hammenu.classList);
+        if (e.target.id !== "puntos-img") {
+            hammenu.classList.remove("show");
+            return;
         }
-        else if((e.target.id === "hammenu" && hammenu.style.display === "flex") || (e.target.id === "puntos-img" && hammenu.style.display === "flex"))
-        {
-            hammenu.style.display = "none";
-        }
-        console.log("Display: " + hammenu.style.display);
+
+        hammenu.classList.toggle("show");
+        
         console.log("Target: " + e.target.id);
     }
     );
 
-    btnmas.addEventListener("click", () => {
-        if(valorvolumen.value < 100)
-        {
+    btnmas.addEventListener("mousedown", () => {
+        if (valorvolumen.value < 100) {
             let valvol = parseInt(valorvolumen.value) + 1;
             valorvolumen.value = valvol;
         }
@@ -57,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
     btnmenos.addEventListener("click", () => {
-        if(valorvolumen.value > 0)
-        {
+        if (valorvolumen.value > 0) {
             let valvol = parseInt(valorvolumen.value) - 1;
             valorvolumen.value = valvol;
         }

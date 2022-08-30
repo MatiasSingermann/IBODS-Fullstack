@@ -179,6 +179,10 @@
     padding-right: 5px;
 }
 
+.show{
+    display: flex;
+}
+
 /* Conexión */
 .title{
     display: flex;
