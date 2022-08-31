@@ -311,6 +311,7 @@ select{
 #btn-container{
     display: flex;
     align-content: center;
+    justify-content: center;
 }
 
 #btn-container img{
@@ -328,18 +329,32 @@ select{
 #btn-container-2{
     display: flex;
     align-content: center;
+    justify-content: center;
 }
 
 #btn-container-2 input{
     align-self: center;
-    width: 40px;
+    display: none;
 }
 
-#button-container{
+#new-checkbox-container{
     display: flex;
     margin: 20px;
-    justify-content: start;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    background-color: rgba(14, 194, 14, 1);
+}
+
+#tilde-img{
+    width: 40px;
+    padding: 20px;
+}
+
+#cruz-img{
+    width: 40px;
+    padding: 20px;
+    display: none;
 }
 
 .object{
@@ -456,6 +471,21 @@ select{
     #img-obj{
         display: flex;
         width: 10px;
+    }
+
+    #new-checkbox-container{
+        border-radius: 10px;
+    }
+
+    #tilde-img{
+        width: 20px;
+        padding: 10px;
+    }
+    
+    #cruz-img{
+        width: 20px;
+        padding: 10px;
+        display: none;
     }
 
     /* Footer */
