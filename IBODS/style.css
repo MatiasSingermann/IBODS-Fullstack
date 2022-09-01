@@ -179,8 +179,10 @@
     padding-right: 5px;
 }
 
-.show{
+#ham-menu-container.show{
     display: flex;
+    transition-property: left;
+    transition-duration: 1s;
 }
 
 /* Conexión */
