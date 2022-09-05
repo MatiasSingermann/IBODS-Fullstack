@@ -4,6 +4,7 @@
     font-family: 'Red Hat Display', sans-serif;
     scroll-behavior: smooth;
     scroll-margin-top: 150px;
+    user-select: none;
 }
 
 *::selection{
@@ -181,8 +182,11 @@
 
 #ham-menu-container.show{
     display: flex;
-    transition-property: left;
-    transition-duration: 1s;
+    animation: move 0.4s ease-in-out;
+}
+
+@keyframes move{
+    0% {transform: translateY(-150px); transition: all 2s;}
 }
 
 /* Conexión */
