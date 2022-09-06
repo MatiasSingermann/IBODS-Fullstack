@@ -109,14 +109,21 @@
 
 /* Hamburger menu */
 #ham-menu-container{
-    display: none;
+    display: flex;
     justify-content: center;
     align-content: center;
     position: fixed;
-    top: 94px;
+    top: -100px;
     margin-top: 0;
     z-index: 500;
     width: 100%;
+    transition: all 0.5s;
+}
+
+#ham-menu-container.show{
+    display: flex;
+    height: auto;
+    top: 94px;
 }
 
 #ham-menu{
@@ -180,14 +187,6 @@
     padding-right: 5px;
 }
 
-#ham-menu-container.show{
-    display: flex;
-    animation: move 0.4s ease-in-out;
-}
-
-@keyframes move{
-    0% {transform: translateY(-150px); transition: all 2s;}
-}
 
 /* Conexión */
 .title{
@@ -449,16 +448,11 @@ select{
     }
     
 
-    /* Hamburger menu */
-    #ham-menu-container{
-        
-    }
-
     /* Volumen */
     #num-volumen{
         width: 100px;
     }
-
+    
 
     /* Objetos */
     #btns-container{
