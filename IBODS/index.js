@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnmenos = document.getElementById("btn-menos");
     const valorvolumen = document.getElementById("num-volumen");
 
+
     hambutton.addEventListener("click", (e) => {
         hammenu.classList.toggle("show");
     }
@@ -22,14 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    btnmas.addEventListener("mousedown", () => {
+
+    const autosumador = (e) => {
         if (valorvolumen.value < 100) {
             let valvol = parseInt(valorvolumen.value) + 1;
             valorvolumen.value = valvol;
         }
-        console.log(valorvolumen.value);
     }
-    );
+
+    const hacerclick = btnmas.addEventListener("mousedown", autosumador);
+
+    while(hacerclick){
+        autosumador();
+        console.log("messi");
+    }
+
+    btnmas.addEventListener("mousedown", autosumador)
+
+    btnmas.setInterval(autosumador, 0);
+
+    // btnmas.addEventListener("mousedown", () => {
+    //     if (valorvolumen.value < 100) {
+    //         let valvol = parseInt(valorvolumen.value) + 1;
+    //         valorvolumen.value = valvol;
+    //     }
+    //     console.log(valorvolumen.value);
+    // }
+    // );
     btnmenos.addEventListener("click", () => {
         if (valorvolumen.value > 0) {
             let valvol = parseInt(valorvolumen.value) - 1;
