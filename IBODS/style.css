@@ -305,12 +305,12 @@ select{
 
 
 /* Objetos */
-#btns-container{
+#objs-container{
     display: flex;
     align-content: center;
 }
 
-#btns-container-2{
+#objs-btn-container{
     display: flex;
     margin: 20px;
     width: 80%;
@@ -331,10 +331,10 @@ select{
 #btn-container img{
     width: 100px;
     align-self: center;
-    padding-right: 20px;
 }
 
 #btn-container b{
+    padding-left: 15px;
     font-size: 40px;
     align-self: center;
     color: rgba(255, 255, 255, 1);
@@ -358,6 +358,13 @@ select{
     margin: 10px 0;
     border-radius: 20px;
     background-color: rgba(14, 194, 14, 1);
+    border: 2px outset rgba(15, 82, 2, 1);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#new-checkbox-container:hover{
+    background-color: rgba(13, 148, 13, 1);
 }
 
 #tilde-img{
@@ -471,7 +478,7 @@ select{
 
 
     /* Objetos */
-    #btns-container{
+    #objs-container{
         width: 360px;
     }
 
@@ -480,7 +487,7 @@ select{
     }
     
     #btn-container b{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #img-obj{
@@ -493,12 +500,12 @@ select{
     }
 
     #tilde-img{
-        width: 20px;
+        width: 40px;
         padding: 10px;
     }
     
     #cruz-img{
-        width: 20px;
+        width: 40px;
         padding: 10px;
         display: none;
     }
