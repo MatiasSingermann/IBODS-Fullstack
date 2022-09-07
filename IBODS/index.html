@@ -77,6 +77,8 @@
             </div>
     </div>
 
+    <div id="fondo-negro"></div>
+
     <h2 class="title" id="con">Conexión</h2>
     <p class="subtitle">
         Usa el botón "BUSCAR" para buscar redes Wi-Fi. Luego selecciona la red a la que te quieras conectar y presiona el botón "CONECTAR".
@@ -99,12 +101,12 @@
 
     <h2 class="title" id="vol">Volumen</h2>
     <p class="subtitle">
-        Haz click en el "-" para bajar el volumen y en el "+" para subirlo.
+        Haz click en el "-" para bajar el volumen y en el "+" para subirlo en una unidad (1). También se puede usar el volume slider para ajustarlo a voluntad.
     </p>
 
     <div id="div-volumen">
         <button id="btn-menos">-</button>
-        <input type="number" min="0" max="100" id="num-volumen" value="50" readonly>
+        <input type="number" min="0" max="100" id="num-volumen" value="50" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
         <button id="btn-mas">+</button>
     </div>
 
@@ -114,21 +116,21 @@
 
     <h2 class="title" id="obj">Objetos</h2>
         <p class="subtitle">
-            Selecciona el objeto que quieras escuchar o dejar de escuchar. Los que estan en verde se escucharán y los que estan en rojo no.
+            Selecciona el objeto que quieras escuchar o dejar de escuchar. Los que estan con un tilde (✓) se escucharán y los que estan con una cruz (✗) no.
         </p>
 
     
     <div id="objs-container">
         <div id="objs-btn-container">
             <div id="btn-container">
-                <img src="./Imágenes/andamios.svg" alt="Andamios" id="img-obj">
+                <img src="./Imágenes/semaforos.svg" alt="Andamios" id="img-obj">
                 <b>Semáforos peatonales</b>
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div id = "new-checkbox-container">
-                    <img src="./Imágenes/tilde.svg" alt="Tilde" id="tilde-img">
-                    <img src="./Imágenes/cruz.svg" alt="Cruz" id="cruz-img">
+                    <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img">
+                    <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img">
                 </div>
             </div>
         </div>

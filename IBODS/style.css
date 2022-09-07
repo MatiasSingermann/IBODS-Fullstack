@@ -187,6 +187,24 @@
     padding-right: 5px;
 }
 
+#fondo-negro{
+    display: none;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    margin-top: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition-duration: 0.5s;
+    transition-property: display;
+}
+
+#fondo-negro.mostrar{
+    display: flex;
+}
+
 
 /* Conexión */
 .title{
@@ -367,12 +385,12 @@ select{
     background-color: rgba(13, 148, 13, 1);
 }
 
-#tilde-img{
+.tilde-img{
     width: 40px;
     padding: 20px;
 }
 
-#cruz-img{
+.cruz-img{
     width: 40px;
     padding: 20px;
     display: none;
@@ -454,6 +472,22 @@ select{
     }
 
     /* Conexion */
+
+    .title{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    
+    .subtitle{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        font-size: 20px;
+    }
+    
     #Red{
         width: 300px;
     }
@@ -499,12 +533,12 @@ select{
         border-radius: 10px;
     }
 
-    #tilde-img{
+    .tilde-img{
         width: 40px;
         padding: 10px;
     }
     
-    #cruz-img{
+    .cruz-img{
         width: 40px;
         padding: 10px;
         display: none;
