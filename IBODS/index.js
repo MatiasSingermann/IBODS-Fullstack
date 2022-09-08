@@ -80,9 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Objetos
 
-    btntilde.querySelector(".tilde-img").addEventListener("click", () => {
-        btnfondo.style.backgroundColor = "rgba(1, 1, 1, 1)";
+    btnfondo.addEventListener("click", () => {
+        console.log(btnfondo.style.borderColor);
+        if(btnfondo.style.borderColor === "rgb(15, 82, 2)"){
+            btnfondo.style.backgroundColor = "rgb(200, 0, 0)";
+            btnfondo.style.borderColor = "rgb(100, 0, 0)";
+        }
+        else{
+            btnfondo.style.backgroundColor = "rgb(14, 194, 14)";
+            btnfondo.style.borderColor = "rgb(15, 82, 2)";
+        }
+        
         console.log("juan");
+        btntilde.classList.toggle("nomost");
+        btncruz.classList.toggle("most");
     }
     );
 }

@@ -326,6 +326,7 @@ select{
 #objs-container{
     display: flex;
     align-content: center;
+    flex-direction: column;
 }
 
 #objs-btn-container{
@@ -375,17 +376,18 @@ select{
     align-content: center;
     margin: 10px 0;
     border-radius: 20px;
-    background-color: rgba(14, 194, 14, 1);
-    border: 2px outset rgba(15, 82, 2, 1);
+    background-color: rgb(14, 194, 14);
+    border: 2px outset rgb(15, 82, 2);
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
 #new-checkbox-container:hover{
-    background-color: rgba(13, 148, 13, 1);
+    background-color: rgb(13, 148, 13);
 }
 
 .tilde-img{
+    display: flex;
     width: 40px;
     padding: 20px;
 }
@@ -394,6 +396,14 @@ select{
     width: 40px;
     padding: 20px;
     display: none;
+}
+
+.tilde-img .nomost{
+    display: none;
+}
+
+.cruz-img .most{
+    display: flex;
 }
 
 .object{
