@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
-    valorslider.addEventListener("change", () => {
+    valorslider.addEventListener("input", () => {
         valorvolumen.value = valorslider.value;
     }
     );
 
-    valorvolumen.addEventListener("change", () => {
+    valorvolumen.addEventListener("input", () => {
         valorslider.value = valorvolumen.value;
 
         if(valorvolumen.value > 100){
