@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const valorvolumen = document.getElementById("num-volumen");
     const valorslider = document.getElementById("volume-slider");
 
-    const btnfondo = document.getElementById("new-checkbox-container");
+    const btnfondo = document.getElementsByClassName("new-checkbox-container");
     const btntilde = document.getElementsByClassName("tilde-img");
     const btncruz = document.getElementsByClassName("cruz-img");
 
