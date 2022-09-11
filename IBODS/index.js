@@ -12,9 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const valorvolumen = document.getElementById("num-volumen");
     const valorslider = document.getElementById("volume-slider");
 
-    const btnfondo = document.getElementsByClassName("new-checkbox-container");
-    const btntilde = document.getElementsByClassName("tilde-img");
-    const btncruz = document.getElementsByClassName("cruz-img");
+    // const btnfondo = document.getElementsByClassName("new-checkbox-container");
+    const btnfondo = document.querySelector(".new-checkbox-container")
+    // const btntilde = document.getElementsByClassName("tilde-img");
+    const btntilde = document.querySelector(".tilde-img")
+    // const btncruz = document.getElementsByClassName("cruz-img");
+    const btncruz = document.querySelector(".cruz-img")
 
 
     // Menu Hamburguesa
@@ -85,15 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if(btnfondo.style.borderColor === "rgb(15, 82, 2)"){
             btnfondo.style.backgroundColor = "rgb(200, 0, 0)";
             btnfondo.style.borderColor = "rgb(100, 0, 0)";
+            btntilde.classList.add("nomost");
+            btncruz.classList.add("most");
         }
         else{
             btnfondo.style.backgroundColor = "rgb(14, 194, 14)";
             btnfondo.style.borderColor = "rgb(15, 82, 2)";
+            btntilde.classList.remove("nomost");
+            btncruz.classList.remove("most");
         }
         
         console.log("juan");
-        btntilde.classList.toggle("nomost");
-        btncruz.classList.toggle("most");
+        // btntilde.classList.toggle("nomost");
+        // btncruz.classList.toggle("most");
     }
     );
 }

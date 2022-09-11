@@ -199,10 +199,12 @@
     top: 0;
     transition-duration: 0.5s;
     transition-property: background-color;
+    top: 1000px;
 }
 
 #fondo-negro.mostrar{
     z-index: 300;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -310,6 +312,12 @@ select{
     font-size: 40px;
     text-align: center;
     background-color: rgba(238, 238, 238, 1);
+    -moz-appearance: textfield;
+}
+
+#num-volumen::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #volume-slider-container{
