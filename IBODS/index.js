@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if(e.target !== hambutton)
         {
-            console.log("1");
             hammenu.classList.remove("show");
             blackout.classList.remove("mostrar");
         }
@@ -97,8 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
             btntilde.classList.remove("nomost");
             btncruz.classList.remove("most");
         }
-        
-        console.log("juan");
         // btntilde.classList.toggle("nomost");
         // btncruz.classList.toggle("most");
     }
