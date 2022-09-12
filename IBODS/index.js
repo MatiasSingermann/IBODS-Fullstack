@@ -136,36 +136,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnsemaforos.addEventListener("click", () => {
         colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
+        if(btnsemaforos.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Semaforos ON");
+        }
+        else{
+            console.log("Semaforos OFF");
+        }
     }
     );
 
     btnpozos.addEventListener("click", () => {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
+        if(btnpozos.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Pozos ON");
+        }
+        else{
+            console.log("Pozos OFF");
+        }
     }
     );
 
     btnveredas.addEventListener("click", () => {
         colorchanger(btnveredas, btntildeveredas, btncruzveredas);
+        if(btnveredas.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Veredas ON");
+        }
+        else{
+            console.log("Veredas OFF");
+        }
     }
     );
 
     btnsendaspeatonales.addEventListener("click", () => {
         colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
+        if(btnsendaspeatonales.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Sendas peatonales ON");
+        }
+        else{
+            console.log("Sendas peatonales OFF");
+        }
     }
     );
 
     btnautomoviles.addEventListener("click", () => {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
+        if(btnautomoviles.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Automoviles ON");
+        }
+        else{
+            console.log("Automoviles OFF");
+        }
     }
     );
 
     btnmotos.addEventListener("click", () => {
         colorchanger(btnmotos, btntildemotos, btncruzmotos);
+        if(btnmotos.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Motos ON");
+        }
+        else{
+            console.log("Motos OFF");
+        }
     }
     );
 
     btnbicicletas.addEventListener("click", () => {
         colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
+        if(btnbicicletas.style.borderColor === "rgb(15, 82, 2)"){
+            console.log("Bicicletas ON");
+        }
+        else{
+            console.log("Bicicletas OFF");
+        }
     }
     );
 }
