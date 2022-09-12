@@ -13,11 +13,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const valorslider = document.getElementById("volume-slider");
 
     // const btnfondo = document.getElementsByClassName("new-checkbox-container");
-    const btnfondo = document.querySelector(".new-checkbox-container")
+    const btnfondo = document.querySelector(".new-checkbox-container");
     // const btntilde = document.getElementsByClassName("tilde-img");
-    const btntilde = document.querySelector(".tilde-img")
+    const btntilde = document.querySelector(".tilde-img");
     // const btncruz = document.getElementsByClassName("cruz-img");
-    const btncruz = document.querySelector(".cruz-img")
+    const btncruz = document.querySelector(".cruz-img");
+
+    // Semaforos
+    const btnsemaforos = document.querySelector("#checkbox-semaforos");
+    const btntildesemaforos = document.querySelector("#tilde-semaforos");
+    const btncruzsemaforos = document.querySelector("#cruz-semaforos");
+
+    // Pozos
+    const btnpozos = document.querySelector("#checkbox-pozos");
+    const btntildepozos = document.querySelector("#tilde-pozos");
+    const btncruzpozos = document.querySelector("#cruz-pozos");
+
+    // Veredas
+    const btnveredas = document.querySelector("#checkbox-veredas");
+    const btntildeveredas = document.querySelector("#tilde-veredas");
+    const btncruzveredas = document.querySelector("#cruz-veredas");
+
+    // Sendas peatonales
+    const btnsendaspeatonales = document.querySelector("#checkbox-sendaspeatonales");
+    const btntildesendaspeatonales = document.querySelector("#tilde-sendaspeatonales");
+    const btncruzsendaspeatonales = document.querySelector("#cruz-sendaspeatonales");
+
+    // Automoviles
+    const btnautomoviles = document.querySelector("#checkbox-automoviles");
+    const btntildeautomoviles = document.querySelector("#tilde-automoviles");
+    const btncruzautomoviles = document.querySelector("#cruz-automoviles");
+
+    // Motos
+    const btnmotos = document.querySelector("#checkbox-motos");
+    const btntildemotos = document.querySelector("#tilde-motos");
+    const btncruzmotos = document.querySelector("#cruz-motos");
+
+    // Bicicletas
+    const btnbicicletas = document.querySelector("#checkbox-bicicletas");
+    const btntildebicicletas = document.querySelector("#tilde-bicicletas");
+    const btncruzbicicletas = document.querySelector("#cruz-bicicletas");
 
 
     // Menu Hamburguesa
@@ -82,22 +117,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Objetos
 
-    btnfondo.addEventListener("click", () => {
-        console.log(btnfondo.style.borderColor);
-        if(btnfondo.style.borderColor === "rgb(15, 82, 2)"){
-            btnfondo.style.backgroundColor = "rgb(200, 0, 0)";
-            btnfondo.style.borderColor = "rgb(100, 0, 0)";
-            btntilde.classList.add("nomost");
-            btncruz.classList.add("most");
+    const colorchanger = (boton, til, cru) => {
+        if(boton.style.borderColor === "rgb(15, 82, 2)"){
+            boton.style.backgroundColor = "rgb(200, 0, 0)";
+            boton.style.borderColor = "rgb(100, 0, 0)";
+            boton.style.backgroundColor.focus = "rgb(50, 0, 0)";
+            til.classList.add("nomost");
+            cru.classList.add("most");
         }
         else{
-            btnfondo.style.backgroundColor = "rgb(14, 194, 14)";
-            btnfondo.style.borderColor = "rgb(15, 82, 2)";
-            btntilde.classList.remove("nomost");
-            btncruz.classList.remove("most");
+            boton.style.backgroundColor = "rgb(14, 194, 14)";
+            boton.style.borderColor = "rgb(15, 82, 2)";
+            boton.style.backgroundColor.focus = "rgb(9, 94, 9)";
+            til.classList.remove("nomost");
+            cru.classList.remove("most");
         }
-        // btntilde.classList.toggle("nomost");
-        // btncruz.classList.toggle("most");
+    };
+
+    btnsemaforos.addEventListener("click", () => {
+        colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
+    }
+    );
+
+    btnpozos.addEventListener("click", () => {
+        colorchanger(btnpozos, btntildepozos, btncruzpozos);
+    }
+    );
+
+    btnveredas.addEventListener("click", () => {
+        colorchanger(btnveredas, btntildeveredas, btncruzveredas);
+    }
+    );
+
+    btnsendaspeatonales.addEventListener("click", () => {
+        colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
+    }
+    );
+
+    btnautomoviles.addEventListener("click", () => {
+        colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
+    }
+    );
+
+    btnmotos.addEventListener("click", () => {
+        colorchanger(btnmotos, btntildemotos, btncruzmotos);
+    }
+    );
+
+    btnbicicletas.addEventListener("click", () => {
+        colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
     }
     );
 }
