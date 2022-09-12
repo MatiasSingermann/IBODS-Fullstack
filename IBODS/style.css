@@ -395,7 +395,7 @@ select{
     background-color: rgb(13, 148, 13);
 }
 
-.new-checkbox-container:hover{
+.new-checkbox-container:focus{
     background-color: rgb(9, 94, 9);
 }
 
