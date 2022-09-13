@@ -19,14 +19,14 @@
         <nav id="nav-container">
             <img src="./Imágenes/Logo.png" alt="Logo IBODS" title="IBODS" id="logo">
             <ul id="nav-ul">
-                <a href="#vol" id="href-vol">
+                <a href="#vol" id="href-vol" tabindex="1">
                     <div id="div-li-volumen">
                         <img src="./Imágenes/volumen.svg" alt="Volumen" id="vol-img">
                         <li class="nav-li"><b>Volumen</b></li>
                     </div>
                 </a>
 
-                <a href="#obj" id="href-obj">
+                <a href="#obj" id="href-obj" tabindex="2">
                     <div id="div-li-objetos">
                         <img src="./Imágenes/arbolchico.svg" alt="Objetos" id="obj-img">
                         <li class="nav-li"><b>Objetos</b></li>
@@ -35,7 +35,7 @@
             </ul>
 
             <div id="div-puntos">
-                <img src="./Imágenes/puntos.svg" alt="Puntos" id="puntos-img">
+                <img src="./Imágenes/puntos.svg" alt="Puntos" id="puntos-img" tabindex="1">
             </div>
         </nav>
     </header>
@@ -62,7 +62,7 @@
     </div>
 
     <div id="fondo-negro"></div>
-    
+
 
     <h2 class="title" id="vol">Volumen</h2>
     <p class="subtitle">
@@ -70,13 +70,13 @@
     </p>
 
     <div id="div-volumen">
-        <button id="btn-menos">-</button>
-        <input type="number" min="0" max="100" id="num-volumen" value="50" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
-        <button id="btn-mas">+</button>
+        <button id="btn-menos" tabindex="3">-</button>
+        <input type="number" min="0" max="100" id="num-volumen" value="50" tabindex="-1" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
+        <button id="btn-mas" tabindex="4">+</button>
     </div>
 
     <div id="volume-slider-container">
-        <input type="range" min="0" max="100" id="volume-slider" value="50">
+        <input type="range" min="0" max="100" id="volume-slider" value="50" tabindex="5">
     </div>
 
     <h2 class="title" id="obj">Objetos</h2>
@@ -93,7 +93,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-semaforos">
+                <div class = "new-checkbox-container" id="checkbox-semaforos" tabindex="6">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-semaforos">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-semaforos">
                 </div>
@@ -106,7 +106,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-pozos">
+                <div class = "new-checkbox-container" id="checkbox-pozos" tabindex="7">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-pozos">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-pozos">
                 </div>
@@ -119,7 +119,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-veredas">
+                <div class = "new-checkbox-container" id="checkbox-veredas" tabindex="8">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-veredas">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-veredas">
                 </div>
@@ -132,7 +132,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-sendaspeatonales">
+                <div class = "new-checkbox-container" id="checkbox-sendaspeatonales" tabindex="9">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-sendaspeatonales">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-sendaspeatonales">
                 </div>
@@ -145,7 +145,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-automoviles">
+                <div class = "new-checkbox-container" id="checkbox-automoviles" tabindex="10">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-automoviles">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-automoviles">
                 </div>
@@ -158,7 +158,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-motos">
+                <div class = "new-checkbox-container" id="checkbox-motos" tabindex="11">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-motos">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-motos">
                 </div>
@@ -171,7 +171,7 @@
             </div>
             <div id="btn-container-2">
                 <input type="checkbox">
-                <div class = "new-checkbox-container" id="checkbox-bicicletas">
+                <div class = "new-checkbox-container" id="checkbox-bicicletas" tabindex="12">
                     <img src="./Imágenes/tilde.svg" alt="Tilde" class="tilde-img" id="tilde-bicicletas">
                     <img src="./Imágenes/cruz.svg" alt="Cruz" class="cruz-img" id="cruz-bicicletas">
                 </div>

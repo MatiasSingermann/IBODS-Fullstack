@@ -49,6 +49,7 @@
     width: 50px;
     align-self: center;
     padding: 5px;
+    border-radius: 20px;
 }
 
 #href-vol, #href-obj{
@@ -347,6 +348,10 @@
     background-color: rgb(9, 94, 9);
 }
 
+.new-checkbox-container.focuseo{
+    background-color: rgb(10, 10, 10);
+}
+
 .tilde-img{
     display: flex;
     width: 40px;
@@ -365,19 +370,6 @@
 
 .cruz-img.most{
     display: flex;
-}
-
-.object:hover{
-    filter: brightness(0.5);
-}
-
-.object:focus{
-    filter: brightness(0.2);
-}
-
-.object-img{
-    width: 200px;
-    display: block;
 }
 
 
@@ -422,8 +414,12 @@
         transition-duration: 0.2s;
     }
 
-    #div-puntos:hover{
+    #puntos-img:hover{
         background-color: rgba(0, 0, 255, 0.5);
+    }
+
+    #puntos-img:focus{
+        background-color: rgba(6, 6, 155, 0.5);
     }
 
     /* Conexion */
@@ -467,6 +463,12 @@
 
 
     /* Objetos */
+    #objs-btn-container{
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
     #objs-container{
         display: flex;
         width: 360px;

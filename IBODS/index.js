@@ -64,8 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     document.addEventListener("click", (e) => {
-        if(e.target !== hambutton)
-        {
+        if (e.target !== hambutton) {
             hammenu.classList.remove("show");
             blackout.classList.remove("mostrar");
         }
@@ -102,13 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
     valorvolumen.addEventListener("input", () => {
         valorslider.value = valorvolumen.value;
 
-        if(valorvolumen.value > 100){
+        if (valorvolumen.value > 100) {
             valorvolumen.value = 100;
         }
-        if(valorvolumen.value < 0){
+        if (valorvolumen.value < 0) {
             valorvolumen.value = 0;
         }
-        if(valorvolumen.value === ""){
+        if (valorvolumen.value === "") {
             valorvolumen.value = 50;
         }
     }
@@ -117,15 +116,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Objetos
 
+    const objbuttons = [btnsemaforos, btnpozos, btnveredas, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
+
+    objbuttons.map((b) => {
+        b.addEventListener("focus", () => {
+            console.log(b.style.backgroundColor);
+            b.classList.add("focuseo");
+            b.style.backgroundColor = "rgb(0, 0, 0)";
+        });
+
+        b.addEventListener("blur", () => {
+            b.classList.remove("focuseo");
+            b.style.backgroundColor = "rgb(50, 50, 50)";
+        });
+    });
+
+    const botones = [hambutton, btnsemaforos, btnpozos, btnveredas, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
+
+    botones.map((b) => {
+        b.addEventListener("keyup", (e) => {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                e.target.click();
+            }
+        });
+    });
+
     const colorchanger = (boton, til, cru) => {
-        if(boton.style.borderColor === "rgb(15, 82, 2)"){
+        if (boton.style.borderColor === "rgb(15, 82, 2)") {
             boton.style.backgroundColor = "rgb(200, 0, 0)";
             boton.style.borderColor = "rgb(100, 0, 0)";
             boton.style.backgroundColor.focus = "rgb(50, 0, 0)";
             til.classList.add("nomost");
             cru.classList.add("most");
         }
-        else{
+        else {
             boton.style.backgroundColor = "rgb(14, 194, 14)";
             boton.style.borderColor = "rgb(15, 82, 2)";
             boton.style.backgroundColor.focus = "rgb(9, 94, 9)";
@@ -136,19 +160,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const hoverchanger = (boton) => {
         boton.addEventListener("mouseenter", () => {
-            if(boton.style.borderColor === "rgb(15, 82, 2)"){
+            if (boton.style.borderColor === "rgb(15, 82, 2)") {
                 boton.style.backgroundColor = "rgb(13, 148, 13)";
             }
-            else{
+            else {
                 boton.style.backgroundColor = "rgb(150, 0, 0)";
             }
         }
         );
         boton.addEventListener("mouseleave", () => {
-            if(boton.style.borderColor === "rgb(15, 82, 2)"){
+            if (boton.style.borderColor === "rgb(15, 82, 2)") {
                 boton.style.backgroundColor = "rgb(14, 194, 14)";
             }
-            else{
+            else {
                 boton.style.backgroundColor = "rgb(200, 0, 0)";
             }
         }
@@ -159,10 +183,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnsemaforos);
     btnsemaforos.addEventListener("click", () => {
         colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
-        if(btnsemaforos.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnsemaforos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Semaforos ON");
         }
-        else{
+        else {
             console.log("Semaforos OFF");
         }
     }
@@ -172,10 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnpozos);
     btnpozos.addEventListener("click", () => {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
-        if(btnpozos.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Pozos ON");
         }
-        else{
+        else {
             console.log("Pozos OFF");
         }
     }
@@ -185,10 +209,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnveredas);
     btnveredas.addEventListener("click", () => {
         colorchanger(btnveredas, btntildeveredas, btncruzveredas);
-        if(btnveredas.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnveredas.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Veredas ON");
         }
-        else{
+        else {
             console.log("Veredas OFF");
         }
     }
@@ -198,10 +222,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnsendaspeatonales);
     btnsendaspeatonales.addEventListener("click", () => {
         colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
-        if(btnsendaspeatonales.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnsendaspeatonales.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Sendas peatonales ON");
         }
-        else{
+        else {
             console.log("Sendas peatonales OFF");
         }
     }
@@ -211,10 +235,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnautomoviles);
     btnautomoviles.addEventListener("click", () => {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
-        if(btnautomoviles.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnautomoviles.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Automoviles ON");
         }
-        else{
+        else {
             console.log("Automoviles OFF");
         }
     }
@@ -224,10 +248,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnmotos);
     btnmotos.addEventListener("click", () => {
         colorchanger(btnmotos, btntildemotos, btncruzmotos);
-        if(btnmotos.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnmotos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Motos ON");
         }
-        else{
+        else {
             console.log("Motos OFF");
         }
     }
@@ -237,10 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverchanger(btnbicicletas);
     btnbicicletas.addEventListener("click", () => {
         colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
-        if(btnbicicletas.style.borderColor === "rgb(15, 82, 2)"){
+        if (btnbicicletas.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Bicicletas ON");
         }
-        else{
+        else {
             console.log("Bicicletas OFF");
         }
     }
