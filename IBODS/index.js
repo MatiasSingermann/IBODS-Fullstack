@@ -134,6 +134,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    const hoverchanger = (boton) => {
+        boton.addEventListener("mouseenter", () => {
+            if(boton.style.borderColor === "rgb(15, 82, 2)"){
+                boton.style.backgroundColor = "rgb(13, 148, 13)";
+            }
+            else{
+                boton.style.backgroundColor = "rgb(150, 0, 0)";
+            }
+        }
+        );
+        boton.addEventListener("mouseleave", () => {
+            if(boton.style.borderColor === "rgb(15, 82, 2)"){
+                boton.style.backgroundColor = "rgb(14, 194, 14)";
+            }
+            else{
+                boton.style.backgroundColor = "rgb(200, 0, 0)";
+            }
+        }
+        );
+    };
+
+    colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
+    hoverchanger(btnsemaforos);
     btnsemaforos.addEventListener("click", () => {
         colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
         if(btnsemaforos.style.borderColor === "rgb(15, 82, 2)"){
@@ -145,6 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnpozos, btntildepozos, btncruzpozos);
+    hoverchanger(btnpozos);
     btnpozos.addEventListener("click", () => {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         if(btnpozos.style.borderColor === "rgb(15, 82, 2)"){
@@ -156,6 +181,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnveredas, btntildeveredas, btncruzveredas);
+    hoverchanger(btnveredas);
     btnveredas.addEventListener("click", () => {
         colorchanger(btnveredas, btntildeveredas, btncruzveredas);
         if(btnveredas.style.borderColor === "rgb(15, 82, 2)"){
@@ -167,6 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
+    hoverchanger(btnsendaspeatonales);
     btnsendaspeatonales.addEventListener("click", () => {
         colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
         if(btnsendaspeatonales.style.borderColor === "rgb(15, 82, 2)"){
@@ -178,6 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
+    hoverchanger(btnautomoviles);
     btnautomoviles.addEventListener("click", () => {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
         if(btnautomoviles.style.borderColor === "rgb(15, 82, 2)"){
@@ -189,6 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnmotos, btntildemotos, btncruzmotos);
+    hoverchanger(btnmotos);
     btnmotos.addEventListener("click", () => {
         colorchanger(btnmotos, btntildemotos, btncruzmotos);
         if(btnmotos.style.borderColor === "rgb(15, 82, 2)"){
@@ -200,6 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     );
 
+    colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
+    hoverchanger(btnbicicletas);
     btnbicicletas.addEventListener("click", () => {
         colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
         if(btnbicicletas.style.borderColor === "rgb(15, 82, 2)"){
