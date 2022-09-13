@@ -234,6 +234,14 @@
     transition-duration: 0.2s;
 }
 
+#btn-menos:hover, #btn-mas:hover{
+    background-color: rgba(22, 22, 116, 1);
+}
+
+#btn-menos:focus, #btn-mas:focus{
+    background-color: rgba(8, 8, 71, 1);
+}
+
 #btn-menos{
     justify-content: center;
     align-items: flex-end;
