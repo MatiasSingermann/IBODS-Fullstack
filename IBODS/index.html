@@ -70,9 +70,9 @@
     </p>
 
     <div id="div-volumen">
-        <button id="btn-menos" tabindex="3">-</button>
+        <button id="btn-menos" tabindex="3" onclick="this.blur();">-</button>
         <input type="number" min="0" max="100" id="num-volumen" value="50" tabindex="-1" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
-        <button id="btn-mas" tabindex="4">+</button>
+        <button id="btn-mas" tabindex="4" onclick="this.blur();">+</button>
     </div>
 
     <div id="volume-slider-container">

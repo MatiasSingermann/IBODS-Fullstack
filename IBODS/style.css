@@ -68,7 +68,7 @@
 }
 
 #href-vol:focus, #href-obj:focus{
-    background-color: rgba(6, 6, 105, 0.5);
+    background-color: rgba(6, 6, 155, 0.5);
 }
 
 .nav-li{
@@ -171,7 +171,7 @@
     justify-content: space-evenly;
 }
 
-#ham-vol-img, #ham-obj-img, #ham-con-img{
+#ham-vol-img, #ham-obj-img{
     width: 30px;
     padding-right: 5px;
 }
@@ -290,7 +290,7 @@
 #objs-btn-container{
     display: flex;
     margin: 20px;
-    width: 80%;
+    width: 76%;
     border-radius: 20px;
     border: 2px outset rgba(22, 22, 116, 1);
     background-color: rgba(45, 45, 167, 1);
@@ -422,8 +422,6 @@
         background-color: rgba(6, 6, 155, 0.5);
     }
 
-    /* Conexion */
-
     .title{
         display: flex;
         flex-wrap: wrap;
@@ -437,17 +435,6 @@
         flex-wrap: wrap;
         margin: 20px;
         font-size: 20px;
-    }
-    
-    #Red{
-        width: 300px;
-    }
-
-    #btn-buscar, #btn-conectar{
-        margin-bottom: 0;
-        width: 140px;
-        height: 80px;
-        font-size: 26px;
     }
     
 
