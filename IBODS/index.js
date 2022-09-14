@@ -120,14 +120,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     objbuttons.map((b) => {
         b.addEventListener("focus", () => {
-            console.log(b.style.backgroundColor);
-            b.classList.add("focuseo");
-            b.style.backgroundColor = "rgb(0, 0, 0)";
+            if (b.style.borderColor === "rgb(15, 82, 2)"){
+                b.style.backgroundColor = "rgb(0, 50, 0)";
+            }
+            else{
+                b.style.backgroundColor = "rgb(50, 0, 0)";
+            }
+            // b.classList.add("focuseo");            
         });
 
         b.addEventListener("blur", () => {
-            b.classList.remove("focuseo");
-            b.style.backgroundColor = "rgb(50, 50, 50)";
+            if (b.style.borderColor === "rgb(15, 82, 2)"){
+                b.style.backgroundColor = "rgb(14, 194, 14)";
+            }
+            else{
+                b.style.backgroundColor = "rgb(200, 0, 0)";
+            }
+            // b.classList.remove("focuseo");
         });
     });
 
