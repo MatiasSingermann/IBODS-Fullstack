@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const btntildebicicletas = document.querySelector("#tilde-bicicletas");
     const btncruzbicicletas = document.querySelector("#cruz-bicicletas");
 
+    // Variables
+    let numvolumen;
+
+    let estadosemaforos;
+    let estadopozos;
+    let estadoveredas;
+    let estadosendaspeatonales;
+    let estadoautomoviles;
+    let estadomotos;
+    let estadobicicletas;
+
+    let mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
 
     // Menu Hamburguesa
 
@@ -116,8 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value === "") {
             valorvolumen.value = 0;
         }
-        
-        let numvolumen;
         if(valorvolumen.value != 100) {
             numvolumen = 0 + valorvolumen.value;
         }
@@ -206,16 +216,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         );
     };
+    
 
     colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
     hoverchanger(btnsemaforos);
     btnsemaforos.addEventListener("click", () => {
+        console.log(mensajeaenviar);
         colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
         if (btnsemaforos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Semaforos ON");
+            estadosemaforos = "1";
         }
         else {
             console.log("Semaforos OFF");
+            estadosemaforos = "0";
         }
     }
     );
@@ -226,9 +240,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Pozos ON");
+            estadopozos = "1";
         }
         else {
             console.log("Pozos OFF");
+            estadopozos = "0";
         }
     }
     );
@@ -239,9 +255,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnveredas, btntildeveredas, btncruzveredas);
         if (btnveredas.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Veredas ON");
+            estadoveredas = "1";
         }
         else {
             console.log("Veredas OFF");
+            estadoveredas = "0";
         }
     }
     );
@@ -252,9 +270,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
         if (btnsendaspeatonales.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Sendas peatonales ON");
+            estadosendaspeatonales = "1";
         }
         else {
             console.log("Sendas peatonales OFF");
+            estadosendaspeatonales = "0";
         }
     }
     );
@@ -265,9 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
         if (btnautomoviles.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Automoviles ON");
+            estadoautomoviles = "1";
         }
         else {
             console.log("Automoviles OFF");
+            estadoautomoviles = "0";
         }
     }
     );
@@ -278,9 +300,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnmotos, btntildemotos, btncruzmotos);
         if (btnmotos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Motos ON");
+            estadomotos = "1";
         }
         else {
             console.log("Motos OFF");
+            estadomotos = "0";
         }
     }
     );
@@ -291,9 +315,11 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
         if (btnbicicletas.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Bicicletas ON");
+            estadobicicletas = "1";
         }
         else {
             console.log("Bicicletas OFF");
+            estadobicicletas = "0";
         }
     }
     );
