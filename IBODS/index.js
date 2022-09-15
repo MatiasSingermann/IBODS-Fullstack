@@ -107,9 +107,28 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value < 0) {
             valorvolumen.value = 0;
         }
+    }
+    );
+
+    valorvolumen.addEventListener("change", () => {
+        valorvolumen.value = (parseInt(valorvolumen.value) + 0).toString();
+        
         if (valorvolumen.value === "") {
-            valorvolumen.value = 50;
+            valorvolumen.value = 0;
         }
+        
+        let numvolumen;
+        if(valorvolumen.value != 100) {
+            numvolumen = 0 + valorvolumen.value;
+        }
+        else{
+            numvolumen = valorvolumen.value
+        }
+        if(valorvolumen.value < 10){
+            console.log("pasa");
+            numvolumen = 0 + (0 + valorvolumen.value);
+        }
+        console.log("numvolumen = " + numvolumen);
     }
     );
 
