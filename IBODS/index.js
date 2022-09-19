@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const btntildepozos = document.querySelector("#tilde-pozos");
     const btncruzpozos = document.querySelector("#cruz-pozos");
 
-    // Veredas
-    const btnveredas = document.querySelector("#checkbox-veredas");
-    const btntildeveredas = document.querySelector("#tilde-veredas");
-    const btncruzveredas = document.querySelector("#cruz-veredas");
+    // Cordones de calle
+    const btncordonesdecalle = document.querySelector("#checkbox-cordonesdecalle");
+    const btntildecordonesdecalle = document.querySelector("#tilde-cordonesdecalle");
+    const btncruzcordonesdecalle = document.querySelector("#cruz-cordonesdecalle");
 
     // Sendas peatonales
     const btnsendaspeatonales = document.querySelector("#checkbox-sendaspeatonales");
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let estadosemaforos = "1";
     let estadopozos = "1";
-    let estadoveredas = "1";
+    let estadocordonesdecalle = "1";
     let estadosendaspeatonales = "1";
     let estadoautomoviles = "1";
     let estadomotos = "1";
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(valorvolumen.value < 10){
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(valorvolumen.value < 10){
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(valorvolumen.value < 10){
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         numvolumen = (valorvolumen.value).toString();
 
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
     }
     );
 
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(valorvolumen.value < 10){
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Objetos
 
-    const objbuttons = [btnsemaforos, btnpozos, btnveredas, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
+    const objbuttons = [btnsemaforos, btnpozos, btncordonesdecalle, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
 
     objbuttons.map((b) => {
         b.addEventListener("focus", () => {
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const botones = [hambutton, btnsemaforos, btnpozos, btnveredas, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
+    const botones = [hambutton, btnsemaforos, btnpozos, btncordonesdecalle, btnsendaspeatonales, btnautomoviles, btnmotos, btnbicicletas];
 
     botones.map((b) => {
         b.addEventListener("keyup", (e) => {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Semaforos OFF");
             estadosemaforos = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -280,24 +280,24 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Pozos OFF");
             estadopozos = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
-    colorchanger(btnveredas, btntildeveredas, btncruzveredas);
-    hoverchanger(btnveredas);
-    btnveredas.addEventListener("click", () => {
-        colorchanger(btnveredas, btntildeveredas, btncruzveredas);
-        if (btnveredas.style.borderColor === "rgb(15, 82, 2)") {
-            console.log("Veredas ON");
-            estadoveredas = "1";
+    colorchanger(btncordonesdecalle, btntildecordonesdecalle, btncruzcordonesdecalle);
+    hoverchanger(btncordonesdecalle);
+    btncordonesdecalle.addEventListener("click", () => {
+        colorchanger(btncordonesdecalle, btntildecordonesdecalle, btncruzcordonesdecalle);
+        if (btncordonesdecalle.style.borderColor === "rgb(15, 82, 2)") {
+            console.log("Cordones de calle ON");
+            estadocordonesdecalle = "1";
         }
         else {
-            console.log("Veredas OFF");
-            estadoveredas = "0";
+            console.log("Cordones de calle OFF");
+            estadocordonesdecalle = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Sendas peatonales OFF");
             estadosendaspeatonales = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Automoviles OFF");
             estadoautomoviles = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Motos OFF");
             estadomotos = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Bicicletas OFF");
             estadobicicletas = "0";
         }
-        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadoveredas + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
