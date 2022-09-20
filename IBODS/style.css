@@ -81,6 +81,7 @@
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-size: 26px;
+    font-weight: 700;
 }
 
 #div-li-volumen{
@@ -156,6 +157,7 @@
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-size: 22px;
+    font-weight: 500;
 }
 
 #ham-div-li-volumen{
@@ -204,6 +206,7 @@
     margin: 20px;
     margin-top: 40px;
     font-size: 50px;
+    font-weight: 600;
 }
 
 .subtitle{
@@ -315,6 +318,7 @@
     font-size: 40px;
     align-self: center;
     color: rgba(255, 255, 255, 1);
+    font-weight: 700;
 }
 
 #btn-container-2{
@@ -385,6 +389,7 @@
     margin: 20px;
     color: rgba(255, 255, 255, 1);
     font-size: 20px;
+    font-weight: 600;
 }
 
 #tic-img{
