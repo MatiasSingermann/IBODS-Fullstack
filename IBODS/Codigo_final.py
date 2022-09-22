@@ -2,7 +2,7 @@ from flask import Flask, render-template, jsonify
 
 Codigo_final = Flask(__name__)
 
-@server.route("/")
+@Codigo_final.route("/")
 def web():
     return render_template('index.html')
 
