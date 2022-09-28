@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const btntildebicicletas = document.querySelector("#tilde-bicicletas");
     const btncruzbicicletas = document.querySelector("#cruz-bicicletas");
 
+    // Personas
+    const btnpersonas = document.querySelector("#checkbox-personas");
+    const btntildepersonas = document.querySelector("#tilde-personas");
+    const btncruzpersonas = document.querySelector("#cruz-personas");
+
     // Variables
     let numvolumen = "050";
 
@@ -64,8 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let estadoautomoviles = "1";
     let estadomotos = "1";
     let estadobicicletas = "1";
+    let estadopersonas = "1";
 
-    let mensajeaenviar = "0501111111";
+    let mensajeaenviar = "05011111111";
 
     // Menu Hamburguesa
 
@@ -366,6 +372,23 @@ document.addEventListener("DOMContentLoaded", () => {
             estadobicicletas = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
+        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+    }
+    );
+
+    colorchanger(btnpersonas, btntildepersonas, btncruzpersonas);
+    hoverchanger(btnpersonas);
+    btnpersonas.addEventListener("click", () => {
+        colorchanger(btnpersonas, btntildepersonas, btncruzpersonas);
+        if (btnpersonas.style.borderColor === "rgb(15, 82, 2)") {
+            console.log("Personas ON");
+            estadopersonas = "1";
+        }
+        else {
+            console.log("Personas OFF");
+            estadopersonas = "0";
+        }
+        mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas + estadopersonas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
