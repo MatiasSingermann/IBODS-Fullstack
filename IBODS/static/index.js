@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         valorvolumen.value = (parseInt(valorvolumen.value) + 0).toString();
         
         if (valorvolumen.value === "") {
-            valorvolumen.value = 0;
+            valorvolumen.value = 50;
         }
         if(valorvolumen.value != 100) {
             numvolumen = (0 + valorvolumen.value).toString();
