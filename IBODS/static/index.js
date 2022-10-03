@@ -258,12 +258,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const mandarmensaje = () => {
-        let msgenviar = {
+        let msg = {
             'volumen': mensajeaenviar.split(0,2),
             'objetos': mensajeaenviar.split(3,9),
         }
         const request = new XMLHttpRequest();
-        request.open('POST', `/${JSON.stringify(msgenviar)}`)
+        request.open('POST', `/${JSON.stringify(msg)}`)
         request.onload = () => {
             const flaskmessage = request.responseText;
             console.log(flaskmessage);
