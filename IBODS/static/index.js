@@ -255,6 +255,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         );
     };
+
+
+    const mandarmensaje = () => {
+        let msgenviar = {
+            'volumen': mensajeaenviar.split(0,2),
+            'objetos': mensajeaenviar.split(3,9),
+        }
+        const request = new XMLHttpRequest();
+        request.open('POST', `/${JSON.stringify(msgenviar)}`)
+        request.onload = () => {
+            const flaskmessage = request.responseText;
+            console.log(flaskmessage);
+        }
+        request.send();
+    };
     
 
     colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
@@ -390,6 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas + estadopersonas;
         console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        msgenviar();
     }
     );
 }
