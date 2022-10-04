@@ -97,17 +97,17 @@ document.addEventListener("DOMContentLoaded", () => {
             valorvolumen.value = valvol;
             valorslider.value = valorvolumen.value;
         }
-        if(valorvolumen.value != 100) {
+        if (valorvolumen.value != 100) {
             numvolumen = (0 + valorvolumen.value).toString();
         }
-        else{
+        else {
             numvolumen = (valorvolumen.value).toString();
         }
-        if(valorvolumen.value < 10){
+        if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -117,33 +117,33 @@ document.addEventListener("DOMContentLoaded", () => {
             valorvolumen.value = valvol;
             valorslider.value = valorvolumen.value;
         }
-        if(valorvolumen.value != 100) {
+        if (valorvolumen.value != 100) {
             numvolumen = (0 + valorvolumen.value).toString();
         }
-        else{
+        else {
             numvolumen = (valorvolumen.value).toString();
         }
-        if(valorvolumen.value < 10){
+        if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
     valorslider.addEventListener("input", () => {
         valorvolumen.value = valorslider.value;
-        if(valorvolumen.value != 100) {
+        if (valorvolumen.value != 100) {
             numvolumen = (0 + valorvolumen.value).toString();
         }
-        else{
+        else {
             numvolumen = (valorvolumen.value).toString();
         }
-        if(valorvolumen.value < 10){
+        if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -165,21 +165,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     valorvolumen.addEventListener("change", () => {
         valorvolumen.value = (parseInt(valorvolumen.value) + 0).toString();
-        
+
         if (valorvolumen.value === "") {
             valorvolumen.value = 50;
         }
-        if(valorvolumen.value != 100) {
+        if (valorvolumen.value != 100) {
             numvolumen = (0 + valorvolumen.value).toString();
         }
-        else{
+        else {
             numvolumen = (valorvolumen.value).toString();
         }
-        if(valorvolumen.value < 10){
+        if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -190,19 +190,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     objbuttons.map((b) => {
         b.addEventListener("focus", () => {
-            if (b.style.borderColor === "rgb(15, 82, 2)"){
+            if (b.style.borderColor === "rgb(15, 82, 2)") {
                 b.style.backgroundColor = "rgb(0, 50, 0)";
             }
-            else{
+            else {
                 b.style.backgroundColor = "rgb(50, 0, 0)";
-            }         
+            }
         });
 
         b.addEventListener("blur", () => {
-            if (b.style.borderColor === "rgb(15, 82, 2)"){
+            if (b.style.borderColor === "rgb(15, 82, 2)") {
                 b.style.backgroundColor = "rgb(14, 194, 14)";
             }
-            else{
+            else {
                 b.style.backgroundColor = "rgb(200, 0, 0)";
             }
         });
@@ -259,18 +259,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const mandarmensaje = () => {
         let msg = {
-            'volumen': mensajeaenviar.split(0,2),
-            'objetos': mensajeaenviar.split(3,9),
+            'volumen': mensajeaenviar.split(0, 2),
+            'objetos': mensajeaenviar.split(3, 9),
         }
-        const request = new XMLHttpRequest();
-        request.open('POST', `/${JSON.stringify(msg)}`)
-        request.onload = () => {
-            const flaskmessage = request.responseText;
-            console.log(flaskmessage);
-        }
-        request.send();
+        // const request = new XMLHttpRequest();
+        // request.open('POST', `/${JSON.stringify(msg)}`)
+        // request.onload = () => {
+        //     const flaskmessage = request.responseText;
+        //     console.log(flaskmessage);
+        // }
+        // request.send();
+        fetch('http://localhost:8000', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(msg)
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
     };
-    
+
 
     colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
     hoverchanger(btnsemaforos);
@@ -285,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadosemaforos = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -302,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadopozos = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -319,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadocordonesdecalle = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -336,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadosendaspeatonales = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -353,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadoautomoviles = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -370,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadomotos = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -387,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadobicicletas = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
     }
     );
 
@@ -404,7 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadopersonas = "0";
         }
         mensajeaenviar = numvolumen + estadosemaforos + estadopozos + estadocordonesdecalle + estadosendaspeatonales + estadoautomoviles + estadomotos + estadobicicletas + estadopersonas;
-        console.log(typeof(mensajeaenviar) + " - " + mensajeaenviar);
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         msgenviar();
     }
     );
