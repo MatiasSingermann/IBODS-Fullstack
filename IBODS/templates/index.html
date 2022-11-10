@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +13,9 @@
 
 <body>
 
-    <script src="{{url_for('static', filename='index.js')}}"></script>
+    <script type="module" src="{{url_for('static', filename='index.js')}}"></script>
 
-    <header id = "header">
+    <!-- <header id = "header">
         <nav id="nav-container">
             <img src="{{url_for('static', filename='Logo.png')}}" alt="Logo IBODS" title="IBODS" id="logo">
             <ul id="nav-ul">
@@ -28,7 +28,7 @@
 
                 <a href="#obj" id="href-obj" tabindex="2">
                     <div id="div-li-objetos">
-                        <img src="{{url_for('static', filename='arbolchico.svg')}}" alt="Objetos" id="obj-img">
+                        <img src="{{url_for('static', filename='semaforito.svg')}}" alt="Objetos" id="obj-img">
                         <li class="nav-li"><b>Objetos</b></li>
                     </div>
                 </a>
@@ -38,9 +38,38 @@
                 <img src="{{url_for('static', filename='puntos.svg')}}" alt="Puntos" id="puntos-img" tabindex="1">
             </div>
         </nav>
+    </header> -->
+
+    <header id = "header">
+        <nav id="nav-container">
+            <img src="{{url_for('static', filename='Logo.png')}}" alt="Logo IBODS" title="IBODS" id="logo">
+            <ul id="nav-ul">
+                <li id="nuevo-li-1">
+                    <a href="#vol" id="href-vol" tabindex="1">
+                        <div id="div-li-volumen">
+                            <img src="{{url_for('static', filename='volumen.svg')}}" alt="Imagen de Volumen" id="vol-img">
+                            <b class="nav-li-1">Volumen</b>
+                        </div>
+                    </a>
+                </li>
+
+                <li id="nuevo-li-2">
+                    <a href="#obj" id="href-obj" tabindex="2">
+                        <div id="div-li-objetos">
+                            <img src="{{url_for('static', filename='semaforito.svg')}}" alt="Imagen de Objetos" id="obj-img">
+                            <b class="nav-li-2">Objetos</b>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="div-puntos">
+                <img src="{{url_for('static', filename='puntos.svg')}}" alt="Menú hamburguesa" id="puntos-img" tabindex="1">
+            </div>
+        </nav>
     </header>
 
-    <div id="ham-menu-container">
+    <!-- <div id="ham-menu-container">
             <div id="ham-menu">
                 <ul id="ham-ul">
                     <a href="#vol" id="ham-href-vol">
@@ -52,14 +81,39 @@
     
                     <a href="#obj" id="ham-href-obj">
                         <div id="ham-div-li-objetos">
-                            <img src="{{url_for('static', filename='arbolchico.svg')}}" alt="Objetos" id="ham-obj-img">
+                            <img src="{{url_for('static', filename='semaforito.svg')}}" alt="Objetos" id="ham-obj-img">
                             <li class="ham-nav-li"><b>Objetos</b></li>
                         </div>
                     </a>
                 </ul>
     
             </div>
-    </div>
+    </div> -->
+
+    <div id="ham-menu-container">
+        <div id="ham-menu">
+            <ul id="ham-ul">
+                <li id="ham-nuevo-li-1">
+                    <a href="#vol" id="ham-href-vol">
+                        <div id="ham-div-li-volumen">
+                            <img src="{{url_for('static', filename='volumen.svg')}}" alt="Imagen de Volumen" id="ham-vol-img">
+                            <b class="ham-nav-li-1">Volumen</b>
+                        </div>
+                    </a>
+                </li>
+
+                <li id="ham-nuevo-li-2">
+                    <a href="#obj" id="ham-href-obj">
+                        <div id="ham-div-li-objetos">
+                            <img src="{{url_for('static', filename='semaforito.svg')}}" alt="Imagen de Objetos" id="ham-obj-img">
+                            <b class="ham-nav-li-2">Objetos</b>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+</div>
 
     <div id="fondo-negro"></div>
 
@@ -70,13 +124,15 @@
     </p>
 
     <div id="div-volumen">
-        <button id="btn-menos" tabindex="-2" onclick="this.blur();">-</button>
-        <input type="number" min="0" max="100" id="num-volumen" value="50" tabindex="-1" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
-        <button id="btn-mas" tabindex="-3" onclick="this.blur();">+</button>
+        <button id="btn-menos" aria-label="Restar en uno" tabindex="-2" onclick="this.blur();">-</button>
+        <label id="label-vol">Volumen</label>
+        <input type="number" min="0" max="100" id="num-volumen" aria-labelledby="label-vol" value="50" tabindex="-1" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
+        <button id="btn-mas" aria-label="Sumar en uno" tabindex="-3" onclick="this.blur();">+</button>
     </div>
 
     <div id="volume-slider-container">
-        <input type="range" min="0" max="100" id="volume-slider" value="50" tabindex="5">
+        <label id="label-slider"></label>
+        <input type="range" min="0" max="100" id="volume-slider" aria-labelledby="label-slider" value="50" aria-label="Deslizador de volumen" tabindex="5">
     </div>
 
     <h2 class="title" id="obj">Objetos</h2>
@@ -94,8 +150,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-semaforos" tabindex="6">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-semaforos">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-semaforos">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Semáforos activados" class="tilde-img" id="tilde-semaforos">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Semáforos desactivados" class="cruz-img" id="cruz-semaforos">
                 </div>
             </div>
         </div>
@@ -107,8 +163,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-pozos" tabindex="7">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-pozos">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-pozos">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Pozos activados" class="tilde-img" id="tilde-pozos">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Pozos desactivados" class="cruz-img" id="cruz-pozos">
                 </div>
             </div>
         </div>
@@ -120,8 +176,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-cordonesdecalle" tabindex="8">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-cordonesdecalle">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-cordonesdecalle">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Cordones de calle activados" class="tilde-img" id="tilde-cordonesdecalle">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cordones de calle desactivados" class="cruz-img" id="cruz-cordonesdecalle">
                 </div>
             </div>
         </div>
@@ -133,8 +189,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-sendaspeatonales" tabindex="9">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-sendaspeatonales">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-sendaspeatonales">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Sendas peatonales activadas" class="tilde-img" id="tilde-sendaspeatonales">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Sendas peatonales desactivadas" class="cruz-img" id="cruz-sendaspeatonales">
                 </div>
             </div>
         </div>
@@ -146,8 +202,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-automoviles" tabindex="10">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-automoviles">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-automoviles">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Automóviles activados" class="tilde-img" id="tilde-automoviles">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Automóviles desactivados" class="cruz-img" id="cruz-automoviles">
                 </div>
             </div>
         </div>
@@ -159,8 +215,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-motos" tabindex="11">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-motos">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-motos">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Motos activadas" class="tilde-img" id="tilde-motos">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Motos desactivadas" class="cruz-img" id="cruz-motos">
                 </div>
             </div>
         </div>
@@ -172,8 +228,8 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-bicicletas" tabindex="12">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-bicicletas">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-bicicletas">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Bicicletas activadas" class="tilde-img" id="tilde-bicicletas">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Bicicletas desactivadas" class="cruz-img" id="cruz-bicicletas">
                 </div>
             </div>
         </div>
@@ -185,8 +241,21 @@
             <div id="btn-container-2">
                 <input type="checkbox">
                 <div class = "new-checkbox-container" id="checkbox-personas" tabindex="13">
-                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Tilde" class="tilde-img" id="tilde-personas">
-                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Cruz" class="cruz-img" id="cruz-personas">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Personas activadas" class="tilde-img" id="tilde-personas">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Personas desactivadas" class="cruz-img" id="cruz-personas">
+                </div>
+            </div>
+        </div>
+        <div id="objs-btn-container">
+            <div id="btn-container">
+                <img src="{{url_for('static', filename='escalones.svg')}}" alt="Escalones" class="img-obj">
+                <b>Escalones</b>
+            </div>
+            <div id="btn-container-2">
+                <input type="checkbox">
+                <div class = "new-checkbox-container" id="checkbox-escalones" tabindex="14">
+                    <img src="{{url_for('static', filename='tilde.svg')}}" alt="Escalones activados" class="tilde-img" id="tilde-escalones">
+                    <img src="{{url_for('static', filename='cruz.svg')}}" alt="Escalones desactivados" class="cruz-img" id="cruz-escalones">
                 </div>
             </div>
         </div>
@@ -196,7 +265,7 @@
     <footer id="footer">
         <div id="div-footer">
             <b id="div-footer-txt">Todos los derechos reservados.</b>
-            <img src="{{url_for('static', filename='tic.png')}}" alt="TIC-logo" id="tic-img">
+            <img src="{{url_for('static', filename='tic.png')}}" alt="TIC logo" id="tic-img">
         </div>
     </footer>
 

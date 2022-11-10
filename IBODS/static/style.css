@@ -1,10 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: "RedHatDisplay", sans-serif;
     scroll-behavior: smooth;
     scroll-margin-top: 150px;
-    user-select: none;
+    /*user-select: none;*/
+}
+
+@font-face {
+    font-family: "RedHatDisplay";
+    src: url('RedHatDisplay-VariableFont_wght.ttf');
 }
 
 *::selection{
@@ -71,17 +76,31 @@
     background-color: rgba(6, 6, 155, 0.5);
 }
 
-.nav-li{
-    display: inline;
-    padding-left: 5px;
+label{
+    display: none;
 }
 
-.nav-li b{
-    display: inline-block;
-    color: rgba(255, 255, 255, 1);
+a, a:hover, a:focus, a:active{
     text-decoration: none;
+}
+
+#nuevo-li-1, #nuevo-li-2{
+    list-style-type: none;
+}
+
+.nav-li-1, .nav-li-2{
+    color: rgba(255, 255, 255, 1);
+    text-decoration-line: none;
     font-size: 26px;
     font-weight: 700;
+}
+
+.nav-li-1{
+    padding-left: 6px;
+}
+
+.nav-li-1{
+    padding-left: 5px;
 }
 
 #div-li-volumen{
@@ -147,17 +166,23 @@
     background-color: rgba(6, 6, 105, 0.5);
 }
 
-.ham-nav-li{
-    display: inline;
-    padding-left: 5px;
+.ham-nuevo-li-1, .ham-nuevo-li-2{
+    list-style-type: none;
 }
 
-.ham-nav-li b{
-    display: inline-block;
+.ham-nav-li-1, .ham-nav-li-2{
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+.ham-nav-li-1{
+    padding-left: 6px;
+}
+
+.ham-nav-li-2{
+    padding-left: 5px;
 }
 
 #ham-div-li-volumen{
@@ -389,7 +414,7 @@
     margin: 20px;
     color: rgba(255, 255, 255, 1);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #tic-img{

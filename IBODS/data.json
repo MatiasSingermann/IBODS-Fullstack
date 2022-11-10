@@ -1,0 +1,14 @@
+{
+    "vol": 60,
+    "mensaje": [
+        "cruzar",
+        "parar",
+        "cordon",
+        "cruces",
+        "autos",
+        "moto",
+        "bicicleta",
+        "personas",
+        "escalones"
+    ]
+}
