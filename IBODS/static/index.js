@@ -483,17 +483,17 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         hoverchanger(btnpozos);
-        if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
-            console.log("Pozos ON");
-            estadopozos = "pozos";
-        }
-        else {
-            console.log("Pozos OFF");
-            estadopozos = "No";
-        }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
-        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
-        mandarmensaje();
+        // if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
+        //     console.log("Pozos ON");
+        //     estadopozos = "pozos";
+        // }
+        // else {
+        //     console.log("Pozos OFF");
+        //     estadopozos = "No";
+        // }
+        // mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+        // console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
+        // mandarmensaje();
     }
 }
 );
