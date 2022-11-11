@@ -34,7 +34,7 @@ def procesador():
         "vol": int(request.json['volumen']),
         "mensaje": mensaje1
     }
-    with open("data.json", "w+") as outfile:
+    with open("./static/data.json", "w+") as outfile:
         json.dump(data, outfile, indent=4)
     return "mensaje recibido"
         #msg=request.args.get('msg')

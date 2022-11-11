@@ -1,5 +1,4 @@
-// import myJson from "../data.json" assert {type:"json"};
-// import myJson from "./messi.json" assert {type:"json"};
+import myJson from "./data.json" assert {type:"json"};
 
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("header");
@@ -474,26 +473,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Datos anteriores
 
-    // valorvolumen.value = myJson.vol;
-    // valorslider.value = myJson.vol;
-    // console.log("hola");
-    // console.log(myJson.vol);
-    // numvolumen = myJson.vol.toString;
+    valorvolumen.value = myJson.vol;
+    valorslider.value = myJson.vol;
+    console.log("hola");
+    console.log(myJson.vol);
+    numvolumen = myJson.vol.toString;
 
-    // if(!file.mensaje.has("pozos"))
-    // {
-    //     colorchanger(btnpozos, btntildepozos, btncruzpozos);
-    //     if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
-    //         console.log("Pozos ON");
-    //         estadopozos = "pozos";
-    //     }
-    //     else {
-    //         console.log("Pozos OFF");
-    //         estadopozos = "No";
-    //     }
-    //     mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
-    //     console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
-    //     mandarmensaje();
-    // }
+    if(!myJson.mensaje.includes("pozos"))
+    {
+        colorchanger(btnpozos, btntildepozos, btncruzpozos);
+        hoverchanger(btnpozos);
+        if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
+            console.log("Pozos ON");
+            estadopozos = "pozos";
+        }
+        else {
+            console.log("Pozos OFF");
+            estadopozos = "No";
+        }
+        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+        console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
+        mandarmensaje();
+    }
 }
 );
