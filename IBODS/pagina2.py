@@ -2,11 +2,7 @@ from flask import Flask, render_template, jsonify
 from flask import request
 import json
 
-import shared
-
 noDetect = "No"
-shared.volumen = 60
-shared.mensaje = []
 
 def seMandan(arr):
     AIsend = []
@@ -26,12 +22,12 @@ def home():
 @codigo_final.route('/', methods=['POST'])
 def procesador():
     print('msg recibido')
-    shared.volumen = int(request.json['volumen'])
+    #shared.volumen = int(request.json['volumen'])
     msg = [request.json['cruzar'], request.json['parar'], request.json['pozos'], request.json['cordonesdecalle'], request.json['sendaspeatonales'], request.json['automoviles'], request.json['motos'], request.json['bicicletas'], request.json['personas'], request.json['escalones']]
     mensaje1 = seMandan(msg)
     print(mensaje1)
     data = {
-        "vol": int(request.json['volumen']),
+        "vol": request.json['volumen'],
         "mensaje": mensaje1
     }
     with open("./static/data.json", "w+") as outfile:

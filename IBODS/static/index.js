@@ -1,4 +1,5 @@
 import myJson from "./data.json" assert {type:"json"};
+// import myJson from "./messi.json" assert {type:"json"};
 
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("header");
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let estadoescalones = "escalones";
 
     // let mensajeaenviar = "050111111111";
-    let mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+    let mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
 
     // Fetch
     const mandarmensaje = () => {
@@ -114,8 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify(msg)
         })
-            .then(response => response.json())
-            .then(data => console.log(data));
+            //.then(response => response.json())
+            //.then(data => console.log(data));
+            //:D
     };
 
     // Menu Hamburguesa
@@ -151,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -172,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -189,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -207,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         numvolumen = (valorvolumen.value).toString();
 
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         mandarmensaje();
     }
     );
@@ -227,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valorvolumen.value < 10) {
             numvolumen = (0 + (0 + valorvolumen.value)).toString();
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -321,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
             estadocruzar = "No";
             estadoparar = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -339,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Pozos OFF");
             estadopozos = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -357,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Cordones de calle OFF");
             estadocordonesdecalle = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -375,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Sendas peatonales OFF");
             estadosendaspeatonales = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -393,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Automoviles OFF");
             estadoautomoviles = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -411,7 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Motos OFF");
             estadomotos = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -429,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Bicicletas OFF");
             estadobicicletas = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -447,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Personas OFF");
             estadopersonas = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -465,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Escalones OFF");
             estadoescalones = "No";
         }
-        mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+                mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
         console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
         mandarmensaje();
     }
@@ -479,21 +481,70 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(myJson.vol);
     numvolumen = myJson.vol.toString;
 
+    if(!myJson.mensaje.includes("cruzar"))
+    {
+        colorchanger(btnsemaforos, btntildesemaforos, btncruzsemaforos);
+        hoverchanger(btnsemaforos);
+        estadocruzar = "No";
+        estadoparar = "No";
+    }
+
     if(!myJson.mensaje.includes("pozos"))
     {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         hoverchanger(btnpozos);
-        // if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
-        //     console.log("Pozos ON");
-        //     estadopozos = "pozos";
-        // }
-        // else {
-        //     console.log("Pozos OFF");
-        //     estadopozos = "No";
-        // }
-        // mensajeaenviar = [numvolumen, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
-        // console.log(typeof (mensajeaenviar) + " - " + mensajeaenviar);
-        // mandarmensaje();
+        estadopozos = "No";
     }
+
+    if(!myJson.mensaje.includes("cordon"))
+    {
+        colorchanger(btncordonesdecalle, btntildecordonesdecalle, btncruzcordonesdecalle);
+        hoverchanger(btncordonesdecalle);
+        estadocordonesdecalle = "No";
+    }
+
+    if(!myJson.mensaje.includes("cruces"))
+    {
+        colorchanger(btnsendaspeatonales, btntildesendaspeatonales, btncruzsendaspeatonales);
+        hoverchanger(btnsendaspeatonales);
+        estadosendaspeatonales = "No";
+    }
+
+    if(!myJson.mensaje.includes("autos"))
+    {
+        colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
+        hoverchanger(btnautomoviles);
+        estadoautomoviles = "No";
+    }
+
+    if(!myJson.mensaje.includes("moto"))
+    {
+        colorchanger(btnmotos, btntildemotos, btncruzmotos);
+        hoverchanger(btnmotos);
+        estadomotos = "No";
+    }
+
+    if(!myJson.mensaje.includes("bicicleta"))
+    {
+        colorchanger(btnbicicletas, btntildebicicletas, btncruzbicicletas);
+        hoverchanger(btnbicicletas);
+        estadobicicletas = "No";
+    }
+
+    if(!myJson.mensaje.includes("personas"))
+    {
+        colorchanger(btnpersonas, btntildepersonas, btncruzpersonas);
+        hoverchanger(btnpersonas);
+        estadopersonas = "No";
+    }
+
+    if(!myJson.mensaje.includes("escalones"))
+    {
+        colorchanger(btnescalones, btntildeescalones, btncruzescalones);
+        hoverchanger(btnescalones);
+        estadoescalones = "No";
+    }
+    mensajeaenviar = [valorvolumen.value, estadocruzar, estadoparar, estadopozos, estadocordonesdecalle, estadosendaspeatonales, estadoautomoviles, estadomotos, estadobicicletas, estadopersonas, estadoescalones];
+    mandarmensaje();
 }
 );
