@@ -73,13 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
     //let estadosemaforos = "semaforos";
     let estadocruzar = "cruzar";
     let estadoparar = "parar";
-    let estadopozos = "pozos";
+    let estadopozos = "pozo";
     let estadocordonesdecalle = "cordon";
     let estadosendaspeatonales = "cruces";
-    let estadoautomoviles = "autos";
+    let estadoautomoviles = "auto";
     let estadomotos = "moto";
     let estadobicicletas = "bicicleta";
-    let estadopersonas = "personas";
+    let estadopersonas = "persona";
     let estadoescalones = "escalones";
 
     // let mensajeaenviar = "050111111111";
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         if (btnpozos.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Pozos ON");
-            estadopozos = "pozos";
+            estadopozos = "pozo";
         }
         else {
             console.log("Pozos OFF");
@@ -389,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
         if (btnautomoviles.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Automoviles ON");
-            estadoautomoviles = "autos";
+            estadoautomoviles = "auto";
         }
         else {
             console.log("Automoviles OFF");
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
         colorchanger(btnpersonas, btntildepersonas, btncruzpersonas);
         if (btnpersonas.style.borderColor === "rgb(15, 82, 2)") {
             console.log("Personas ON");
-            estadopersonas = "personas";
+            estadopersonas = "persona";
         }
         else {
             console.log("Personas OFF");
@@ -489,7 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
         estadoparar = "No";
     }
 
-    if(!myJson.mensaje.includes("pozos"))
+    if(!myJson.mensaje.includes("pozo"))
     {
         colorchanger(btnpozos, btntildepozos, btncruzpozos);
         hoverchanger(btnpozos);
@@ -510,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
         estadosendaspeatonales = "No";
     }
 
-    if(!myJson.mensaje.includes("autos"))
+    if(!myJson.mensaje.includes("auto"))
     {
         colorchanger(btnautomoviles, btntildeautomoviles, btncruzautomoviles);
         hoverchanger(btnautomoviles);
@@ -531,7 +531,7 @@ document.addEventListener("DOMContentLoaded", () => {
         estadobicicletas = "No";
     }
 
-    if(!myJson.mensaje.includes("personas"))
+    if(!myJson.mensaje.includes("persona"))
     {
         colorchanger(btnpersonas, btntildepersonas, btncruzpersonas);
         hoverchanger(btnpersonas);
